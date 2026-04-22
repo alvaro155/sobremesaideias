@@ -1,0 +1,36 @@
+{
+  "slug": "taina",
+  "order": 7,
+  "name": "Tainã Stingher",
+  "role": "Diretor",
+  "bioTitle": "TAINÃ STINGHER",
+  "bioParagraphs": [
+    "Conteúdo em atualização. A estrutura desta página já está pronta para receber bio, retrato, links e projetos pelo Pages CMS."
+  ],
+  "portrait": null,
+  "portraitAlt": "Retrato de Tainã Stingher",
+  "socialLinks": [],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Projeto 01",
+      "videoUrl": "https://vimeo.com/702580022",
+      "coverImage": null,
+      "coverImageAlt": ""
+    },
+    {
+      "id": "2",
+      "title": "Projeto 02",
+      "videoUrl": "https://vimeo.com/702580022",
+      "coverImage": null,
+      "coverImageAlt": ""
+    },
+    {
+      "id": "3",
+      "title": "Projeto 03",
+      "videoUrl": "https://vimeo.com/702580022",
+      "coverImage": null,
+      "coverImageAlt": ""
+    }
+  ]
+}

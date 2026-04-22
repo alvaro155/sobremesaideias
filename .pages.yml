@@ -1,0 +1,233 @@
+media:
+  input: public/media
+  output: /media
+
+components:
+  social_link:
+    type: object
+    label: Link social
+    fields:
+      - name: label
+        label: Nome
+        type: string
+        required: true
+      - name: url
+        label: URL
+        type: string
+        required: true
+  project:
+    type: object
+    label: Projeto
+    fields:
+      - name: id
+        label: ID da seção
+        type: string
+        required: true
+        description: Use valores curtos como 1, 2, 3 ou bio.
+      - name: title
+        label: Nome do projeto
+        type: string
+        required: true
+      - name: videoUrl
+        label: URL do vídeo
+        type: string
+        required: true
+      - name: coverImage
+        label: Imagem de capa
+        type: image
+        required: false
+        options:
+          path: project-covers
+      - name: coverImageAlt
+        label: Alt da capa
+        type: string
+  profile_link:
+    type: object
+    label: Link de perfil
+    fields:
+      - name: label
+        label: Nome
+        type: string
+        required: true
+      - name: url
+        label: URL
+        type: string
+        required: true
+
+content:
+  - name: site
+    label: Site
+    type: file
+    path: content/pt/site.json
+    format: json
+    fields:
+      - name: locale
+        label: Idioma base
+        type: string
+        readonly: true
+      - name: studioName
+        label: Nome do estúdio
+        type: string
+        required: true
+      - name: logoText
+        label: Texto do logo
+        type: string
+        required: true
+      - name: logoImage
+        label: Imagem do logo
+        type: image
+        required: false
+        options:
+          path: logos
+      - name: header
+        label: Header
+        type: object
+        fields:
+          - name: aboutLabel
+            label: Rótulo Sobre
+            type: string
+            required: true
+          - name: contactLabel
+            label: Rótulo Contato
+            type: string
+            required: true
+      - name: contactPanel
+        label: Painel de contato
+        type: object
+        fields:
+          - name: title
+            label: Título
+            type: string
+            required: true
+          - name: role
+            label: Cargo
+            type: string
+            required: true
+          - name: name
+            label: Nome
+            type: string
+            required: true
+          - name: phone
+            label: Telefone
+            type: string
+            required: true
+          - name: email
+            label: Email
+            type: string
+            required: true
+      - name: socialLinks
+        label: Links sociais
+        component: social_link
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+
+  - name: home
+    label: Home
+    type: file
+    path: content/pt/pages/home.json
+    format: json
+    fields:
+      - name: heroVideoUrl
+        label: Vídeo de fundo
+        type: string
+        required: true
+      - name: directorsLabel
+        label: Título da lista
+        type: string
+        required: false
+
+  - name: sobre
+    label: Sobre
+    type: file
+    path: content/pt/pages/sobre.json
+    format: json
+    fields:
+      - name: title
+        label: Título curto
+        type: string
+        required: true
+      - name: intro
+        label: Destaque
+        type: text
+        required: true
+      - name: paragraphs
+        label: Parágrafos
+        type: text
+        list: true
+      - name: bottomImage
+        label: Imagem de base
+        type: image
+        required: false
+        options:
+          path: sobre
+      - name: bottomImageAlt
+        label: Alt da imagem
+        type: string
+
+  - name: directors
+    label: Diretores
+    type: collection
+    path: content/pt/directors
+    format: json
+    filename: "{slug}.json"
+    view:
+      primary: name
+      fields: [name, slug, order]
+      sort: [order, name]
+      default:
+        sort: order
+        order: asc
+    fields:
+      - name: slug
+        label: Slug
+        type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+      - name: order
+        label: Ordem
+        type: number
+        required: true
+      - name: name
+        label: Nome
+        type: string
+        required: true
+      - name: role
+        label: Função
+        type: string
+        required: true
+      - name: bioTitle
+        label: Título da bio
+        type: string
+        required: true
+      - name: bioParagraphs
+        label: Parágrafos da bio
+        type: text
+        list: true
+      - name: portrait
+        label: Foto
+        type: image
+        required: false
+        options:
+          path: directors
+      - name: portraitAlt
+        label: Alt da foto
+        type: string
+      - name: socialLinks
+        label: Links do diretor
+        component: profile_link
+        list:
+          min: 0
+          collapsible:
+            collapsed: true
+            summary: "{label}"
+      - name: projects
+        label: Projetos
+        component: project
+        list:
+          min: 1
+          collapsible:
+            collapsed: true
+            summary: "{id} - {title}"

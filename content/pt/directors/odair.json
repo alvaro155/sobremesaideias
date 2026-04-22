@@ -1,0 +1,36 @@
+{
+  "slug": "odair",
+  "order": 4,
+  "name": "Odair Faléco",
+  "role": "Diretor",
+  "bioTitle": "ODAIR FALÉCO",
+  "bioParagraphs": [
+    "A Sobremesa Ideias nasceu com apetite por narrativas marcantes. Misturamos cinema e rua, técnica e afeto, estética e instinto. Acreditamos que boas ideias não têm receita pronta. Só ingredientes certos, ponto de vista apurado e criatividade. Cada projeto é pensado como um prato especial: com curadoria, equilíbrio e um toque autoral. Sabemos onde temperar mais e quando servir simples. E o nome diz tudo. Sobremesa é o detalhe que surpreende. Chega no fim, mas rouba a cena. Experimente."
+  ],
+  "portrait": null,
+  "portraitAlt": "Retrato de Odair Faleco",
+  "socialLinks": [],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Sinuca de bico",
+      "videoUrl": "https://vimeo.com/702580022",
+      "coverImage": null,
+      "coverImageAlt": ""
+    },
+    {
+      "id": "2",
+      "title": "The tool",
+      "videoUrl": "https://vimeo.com/702580022",
+      "coverImage": null,
+      "coverImageAlt": ""
+    },
+    {
+      "id": "3",
+      "title": "Clothes of deception",
+      "videoUrl": "https://vimeo.com/702580022",
+      "coverImage": null,
+      "coverImageAlt": ""
+    }
+  ]
+}
