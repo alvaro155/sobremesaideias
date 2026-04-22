@@ -68,6 +68,7 @@ export function SiteHeader({ site }: SiteHeaderProps) {
               pathname === "/sobre" ? " site-header__link--active" : ""
             }`}
             href="/sobre"
+            aria-current={pathname === "/sobre" ? "page" : undefined}
             onClick={() => setIsDrawerOpen(false)}
           >
             {site.header.aboutLabel}

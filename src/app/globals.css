@@ -186,33 +186,19 @@ iframe {
 }
 
 .site-header__link {
-  position: relative;
   cursor: pointer;
+  color: var(--color-cream);
   font-size: 1.08rem;
   font-weight: 400;
   line-height: 1;
   text-transform: uppercase;
+  transition: color 180ms ease;
 }
 
-.site-header__link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -0.28rem;
-  height: 1px;
-  background: currentColor;
-  opacity: 0;
-  transform: scaleX(0.7);
-  transform-origin: center;
-  transition: opacity 180ms ease, transform 180ms ease;
-}
-
-.site-header__link:hover::after,
-.site-header__link:focus-visible::after,
-.site-header__link--active::after {
-  opacity: 1;
-  transform: scaleX(1);
+.site-header__link:hover,
+.site-header__link:focus-visible,
+.site-header__link--active {
+  color: var(--color-red);
 }
 
 .contact-drawer-backdrop {
