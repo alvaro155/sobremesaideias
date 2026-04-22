@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import type { ReactNode } from "react";
 import { useEffect, useMemo, useState } from "react";
 
 import type { DirectorData } from "@/types/content";
@@ -12,6 +13,47 @@ type DirectorExperienceProps = {
   director: DirectorData;
   directors: DirectorData[];
 };
+
+const bioLinkPattern = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g;
+
+function renderBioParagraph(paragraph: string): ReactNode {
+  const matches = Array.from(paragraph.matchAll(bioLinkPattern));
+
+  if (!matches.length) {
+    return paragraph;
+  }
+
+  const parts: ReactNode[] = [];
+  let lastIndex = 0;
+
+  matches.forEach((match, index) => {
+    const matchIndex = match.index ?? 0;
+
+    if (matchIndex > lastIndex) {
+      parts.push(paragraph.slice(lastIndex, matchIndex));
+    }
+
+    parts.push(
+      <a
+        className="director-bio__text-link"
+        href={match[2]}
+        key={`${match[1]}-${index}`}
+        target="_blank"
+        rel="noreferrer"
+      >
+        {match[1]}
+      </a>,
+    );
+
+    lastIndex = matchIndex + match[0].length;
+  });
+
+  if (lastIndex < paragraph.length) {
+    parts.push(paragraph.slice(lastIndex));
+  }
+
+  return parts;
+}
 
 export function DirectorExperience({
   director,
@@ -150,7 +192,7 @@ export function DirectorExperience({
             <div className="director-bio__copy">
               <h1>{director.bioTitle}</h1>
               {director.bioParagraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
+                <p key={paragraph}>{renderBioParagraph(paragraph)}</p>
               ))}
 
               <div className="director-bio__links">

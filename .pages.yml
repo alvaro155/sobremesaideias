@@ -206,6 +206,7 @@ content:
         label: Parágrafos da bio
         type: text
         list: true
+        description: Aceita links em Markdown, por exemplo [Nome](https://exemplo.com).
       - name: portrait
         label: Foto
         type: image

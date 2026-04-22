@@ -5,11 +5,22 @@
   "role": "Diretor",
   "bioTitle": "ODAIR FALÉCO",
   "bioParagraphs": [
-    "A Sobremesa Ideias nasceu com apetite por narrativas marcantes. Misturamos cinema e rua, técnica e afeto, estética e instinto. Acreditamos que boas ideias não têm receita pronta. Só ingredientes certos, ponto de vista apurado e criatividade. Cada projeto é pensado como um prato especial: com curadoria, equilíbrio e um toque autoral. Sabemos onde temperar mais e quando servir simples. E o nome diz tudo. Sobremesa é o detalhe que surpreende. Chega no fim, mas rouba a cena. Experimente."
+    "Há profissionais que atravessam a história tentando acompanhar as mudanças. Odair Faléco é dos poucos que fizeram as mudanças o acompanharem. Construiu carreira como UX Lead, mas se tornou pioneiro na exploração de IA para criação de filmes. Trabalhou em agências globais como R/GA, DDB, Accenture, com marcas como McDonald’s e Mastercard.",
+    "Seu trabalho com IA é reconhecido pela parceria oficial com diversas marcas como Runway, Freepik, e outras, além de prêmios em festivais ao redor do mundo. Participa ativamente da comunidade e festivais como palestrante, em 2026 foi membro oficial do júri do 105º ADC Awards na categoria IA.",
+    "Presidente e curador do [Czech Int. AI Film Festival](https://ciaiff.com/) em Praga onde mora, festival que acontece desde 2023. Criador do [zero1cine](https://zero1cine.com/), primeiro banco curado de filmes IA. Porque, como sempre, em tempos de abundância é a curadoria que vira o verdadeiro luxo. Alguém que converte o vocabulário algorítmico da IA em frases inteligíveis para o dia a dia dos times de criação, sem o mistério que intimida nem o entusiasmo vazio que atrapalha."
   ],
-  "portrait": null,
+  "portrait": "/media/directors/odair_faleco.png",
   "portraitAlt": "Retrato de Odair Faleco",
-  "socialLinks": [],
+  "socialLinks": [
+    {
+      "label": "Linkedin",
+      "url": "https://www.linkedin.com/in/odairfaleco/"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/odair_faleco"
+    }
+  ],
   "projects": [
     {
       "id": "1",
