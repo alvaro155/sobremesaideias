@@ -12,6 +12,11 @@ export const metadata: Metadata = {
   },
   description:
     "Website institucional da Sobremesa Ideias, estúdio de produção de vídeo.",
+  icons: {
+    icon: "/media/logos/favicon.png",
+    shortcut: "/media/logos/favicon.png",
+    apple: "/media/logos/favicon.png",
+  },
 };
 
 export default async function RootLayout({

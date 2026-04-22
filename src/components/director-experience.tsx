@@ -32,6 +32,16 @@ export function DirectorExperience({
   );
 
   useEffect(() => {
+    document.documentElement.classList.add("director-scroll-page");
+    document.body.classList.add("director-scroll-page");
+
+    return () => {
+      document.documentElement.classList.remove("director-scroll-page");
+      document.body.classList.remove("director-scroll-page");
+    };
+  }, [director.slug]);
+
+  useEffect(() => {
     const sections = Array.from(
       document.querySelectorAll<HTMLElement>("[data-anchor-section]"),
     );
@@ -119,7 +129,13 @@ export function DirectorExperience({
 
             <div className="director-section__meta">
               <p>{director.name}</p>
-              <h2>{project.title}</h2>
+              <button
+                className="director-section__project-link"
+                type="button"
+                onClick={() => setSelectedProjectId(project.id)}
+              >
+                {project.title}
+              </button>
               <span>Assistir</span>
             </div>
           </section>
