@@ -621,6 +621,11 @@ body.director-scroll-page {
   color: var(--color-red);
 }
 
+.director-section__project-link--disabled:hover,
+.director-section__project-link--disabled:focus-visible {
+  color: inherit;
+}
+
 .director-section__meta span {
   display: none;
 }

@@ -31,7 +31,7 @@ components:
       - name: videoUrl
         label: URL do vídeo
         type: string
-        required: true
+        required: false
       - name: coverImage
         label: Imagem de capa
         type: image

@@ -5,30 +5,34 @@
   "role": "Diretor",
   "bioTitle": "BILLY BOMAN",
   "bioParagraphs": [
-    "Conteúdo em atualização. A estrutura desta página já está pronta para receber bio, retrato, links e projetos pelo Pages CMS."
+    "Há uma coisa interessante nos artistas que nascem no frio do norte europeu: aprendem cedo que a luz é um bem escasso e passam a vida fazendo render cada raio. Billy Boman é um desses. Construiu, em Estocolmo, sua reputação de artista digital e diretor criativo, conhecido pelos visuais cinematográficos feitos com IA e por uma narrativa experimental em que arte, moda e tecnologia se entrelaçam sem esforço — assinando projetos para marcas como Ballantines Whiskey, Nissan, YouTube, Google e Klarna.",
+    "Com o tempo, tornou-se uma das vozes mais respeitadas da cena europeia de arte com IA, transitando com desenvoltura entre o território mais inquieto da criação autoral e o das grandes marcas — ali, onde o experimental deixa de soar como exceção e se torna, finalmente, linguagem.",
+    "Hoje, além de seguir produzindo, Billy também ensina IA criativa na Berghs SOC, a principal escola de comunicação criativa da Europa. Talvez, porque saiba, melhor do que ninguém, que quem caminha pela fronteira carrega uma espécie de dever silencioso: o de ajudar os outros a desenhar o mapa."
   ],
   "portrait": null,
   "portraitAlt": "Retrato de Billy Boman",
-  "socialLinks": [],
+  "socialLinks": [
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/billy.boman/"
+    },
+    {
+      "label": "Linkedin",
+      "url": "https://www.linkedin.com/in/billyboman/"
+    }
+  ],
   "projects": [
     {
       "id": "1",
-      "title": "Projeto 01",
-      "videoUrl": "https://vimeo.com/702580022",
+      "title": "Showreel 1",
+      "videoUrl": "https://youtu.be/bR-UwTU2Www?si=8woinN6WGbeG-TO7",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "2",
-      "title": "Projeto 02",
-      "videoUrl": "https://vimeo.com/702580022",
-      "coverImage": null,
-      "coverImageAlt": ""
-    },
-    {
-      "id": "3",
-      "title": "Projeto 03",
-      "videoUrl": "https://vimeo.com/702580022",
+      "title": "Showreel 2",
+      "videoUrl": "https://youtu.be/Rj76BrhDJOY?si=mgxmQYe9PgJhnttz",
       "coverImage": null,
       "coverImageAlt": ""
     }

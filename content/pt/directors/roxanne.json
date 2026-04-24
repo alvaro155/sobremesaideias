@@ -5,30 +5,41 @@
   "role": "Diretor",
   "bioTitle": "ROXANNE DUCHARME",
   "bioParagraphs": [
-    "Conteúdo em atualização. A estrutura desta página já está pronta para receber bio, retrato, links e projetos pelo Pages CMS."
+    "Quarenta anos contando histórias não é um número trivial — é uma biografia. Roxanne Ducharme construiu a sua como filmmaker, com raízes na animação tradicional e na narrativa visual, um ofício que exige paciência, olho e a humildade de entender que cada quadro é um pequeno mundo à parte. Entre seus créditos estão “Um Faroeste de Arromba”, produzido por Steven Spielberg, o curta britânico “The Village” — indicado ao Oscar e ao BAFTA — e a querida série animada “Arthur”, além de ilustrações exibidas em documentários da National Geographic, Discovery Channel e Science Channel. No meio disso tudo, um Daytime Emmy® para lembrar que o tempo recompensa.",
+    "Baseada no Panamá, traduziu esse repertório clássico para o território ainda novo da IA generativa, criando filmes que unem ofício, emoção e uma sensibilidade visual que só décadas de profissão moldam — ali, onde o traço feito a mão livre encontra as novas ferramentas sem nunca perder a assinatura do artista.",
+    "Hoje, seus filmes feitos com IA circulam por festivais internacionais e rendem prêmios, enquanto sua assinatura publicitária mais recente inclui campanhas para Airalo e Coca-Cola."
   ],
-  "portrait": null,
+  "portrait": "/media/directors/roxanne_ducharme.png",
   "portraitAlt": "Retrato de Roxanne Ducharme",
-  "socialLinks": [],
+  "socialLinks": [
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/trashcanroxanne/"
+    },
+    {
+      "label": "Linkedin",
+      "url": "https://www.linkedin.com/in/roxanneducharme/"
+    }
+  ],
   "projects": [
     {
       "id": "1",
-      "title": "Projeto 01",
-      "videoUrl": "https://vimeo.com/702580022",
+      "title": "SEA THAT DREAMED",
+      "videoUrl": "https://youtu.be/ZNVtR7Ea5eE",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "2",
-      "title": "Projeto 02",
-      "videoUrl": "https://vimeo.com/702580022",
+      "title": "I Don't GIVE",
+      "videoUrl": "https://youtu.be/DPNytdn81PA",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "3",
-      "title": "Projeto 03",
-      "videoUrl": "https://vimeo.com/702580022",
+      "title": "DREAMINA",
+      "videoUrl": "https://youtu.be/DGNrr2zwWGA",
       "coverImage": null,
       "coverImageAlt": ""
     }

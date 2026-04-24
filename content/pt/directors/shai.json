@@ -5,30 +5,41 @@
   "role": "Diretor",
   "bioTitle": "SHAI BUNESE",
   "bioParagraphs": [
-    "Conteúdo em atualização. A estrutura desta página já está pronta para receber bio, retrato, links e projetos pelo Pages CMS."
+    "Toda boa imagem cinematográfica nasce de uma equação difícil de resolver: precisão técnica de um lado, emoção do outro e, no meio — quase invisível —, o talento raro de quem sabe equilibrar os dois pratos da balança. Shai Bunese construiu carreira exatamente nesse miolo delicado. Diretor e artista visual, desenvolve vídeos em que tecnologia, direção de arte e narrativa se encontram num mesmo plano, criando uma linguagem cinematográfica imersiva que pede, de quem assiste, mais do que um olhar: pede presença.",
+    "Seu trabalho vive do atrito produtivo entre inovação e sensibilidade — aquele território em que as ferramentas mais novas servem à mais antiga das funções, a de fazer alguém sentir algo antes de entender. Assinou projetos para marcas como Coca-Cola e Amazon, em que cada frame precisa carregar, ao mesmo tempo, o rigor da grande produção e a leveza de quem sabe que a imagem fala antes da palavra.",
+    "Na Sobremesa Ideias, Shai é o tipo de diretora que trata a inteligência artificial como trata qualquer outro ofício da casa: com curiosidade, repertório e um ceticismo saudável. Porque tecnologia, no fim das contas, é sempre coadjuvante. O protagonista continua sendo o mesmo de sempre — a boa ideia, bem contada."
   ],
-  "portrait": null,
+  "portrait": "/media/directors/shai_bunese.png",
   "portraitAlt": "Retrato de Shai Bunese",
-  "socialLinks": [],
+  "socialLinks": [
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/aiai_shai/"
+    },
+    {
+      "label": "Linkedin",
+      "url": "https://www.linkedin.com/in/shainabc/"
+    }
+  ],
   "projects": [
     {
       "id": "1",
-      "title": "Projeto 01",
-      "videoUrl": "https://vimeo.com/702580022",
+      "title": "Mãe e Filha",
+      "videoUrl": "",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "2",
-      "title": "Projeto 02",
-      "videoUrl": "https://vimeo.com/702580022",
+      "title": "AI Pilot",
+      "videoUrl": "https://youtu.be/Jl7cd8LD5U0",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "3",
-      "title": "Projeto 03",
-      "videoUrl": "https://vimeo.com/702580022",
+      "title": "Metromor",
+      "videoUrl": "https://youtube.com/shorts/GJx4S-U6oSE?feature=share",
       "coverImage": null,
       "coverImageAlt": ""
     }

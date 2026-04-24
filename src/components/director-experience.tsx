@@ -144,44 +144,57 @@ export function DirectorExperience({
           </ul>
         </nav>
 
-        {director.projects.map((project) => (
-          <section
-            className="director-section director-section--project"
-            data-anchor-section
-            id={project.id}
-            key={project.id}
-          >
-            <BackgroundVideo
-              title={`${director.name} ${project.title}`}
-              videoUrl={project.videoUrl}
-              posterImage={project.coverImage}
-              posterAlt={project.coverImageAlt}
-            />
-            <div className="director-section__tint" aria-hidden="true" />
+        {director.projects.map((project) => {
+          const videoUrl = project.videoUrl ?? "";
+          const hasVideo = Boolean(videoUrl.trim());
 
-            <button
-              className="director-section__hitarea"
-              type="button"
-              onClick={() => setSelectedProjectId(project.id)}
+          return (
+            <section
+              className="director-section director-section--project"
+              data-anchor-section
+              id={project.id}
+              key={project.id}
             >
-              <span className="visually-hidden">
-                Abrir vídeo de {project.title}
-              </span>
-            </button>
+              <BackgroundVideo
+                title={`${director.name} ${project.title}`}
+                videoUrl={videoUrl}
+                posterImage={project.coverImage}
+                posterAlt={project.coverImageAlt}
+              />
+              <div className="director-section__tint" aria-hidden="true" />
 
-            <div className="director-section__meta">
-              <p>{director.name}</p>
-              <button
-                className="director-section__project-link"
-                type="button"
-                onClick={() => setSelectedProjectId(project.id)}
-              >
-                {project.title}
-              </button>
-              <span>Assistir</span>
-            </div>
-          </section>
-        ))}
+              {hasVideo ? (
+                <button
+                  className="director-section__hitarea"
+                  type="button"
+                  onClick={() => setSelectedProjectId(project.id)}
+                >
+                  <span className="visually-hidden">
+                    Abrir vídeo de {project.title}
+                  </span>
+                </button>
+              ) : null}
+
+              <div className="director-section__meta">
+                <p>{director.name}</p>
+                {hasVideo ? (
+                  <button
+                    className="director-section__project-link"
+                    type="button"
+                    onClick={() => setSelectedProjectId(project.id)}
+                  >
+                    {project.title}
+                  </button>
+                ) : (
+                  <span className="director-section__project-link director-section__project-link--disabled">
+                    {project.title}
+                  </span>
+                )}
+                {hasVideo ? <span>Assistir</span> : null}
+              </div>
+            </section>
+          );
+        })}
 
         <section
           className="director-section director-section--bio"

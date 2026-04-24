@@ -1,34 +1,41 @@
 {
   "slug": "taina",
   "order": 7,
-  "name": "Tainã Stingher",
+  "name": "Tainã Stinghen",
   "role": "Diretor",
-  "bioTitle": "TAINÃ STINGHER",
+  "bioTitle": "TAINÃ STINGHEN",
   "bioParagraphs": [
-    "Conteúdo em atualização. A estrutura desta página já está pronta para receber bio, retrato, links e projetos pelo Pages CMS."
+    "Tainã Stinghen começou no teatro — aquele território antigo em que música, corpo e emoção precisam coabitar na dose certa, sob pena de a plateia perceber a falsidade antes de o ato terminar. Cedo foi indicado por melhor direção musical e atuação em “O Cordel do Amor sem Fim”. Era o sinal de que ali havia um artista aprendendo o ofício difícil de equilibrar movimento e narrativa.",
+    "Com mais de 30 projetos para streaming no currículo — entre séries, documentários e clipes como “Lilyhammer”, “Últimos Dias de Getúlio” e “Sintonia” —, Tainã tornou-se o tipo de diretor que fermenta cada cena: cuida do ritmo, da textura e do BLABLABLA como quem sabe que toda história boa, antes de chegar à tela, precisa primeiro ganhar corpo e, depois, sabor.",
+    "Há quatro anos, migrou para a publicidade e para o conteúdo mobile sem abrir mão da paixão pela invenção. Na Sobremesa Ideias, mistura técnicas e linguagens como quem coreografa BLABLABLA"
   ],
-  "portrait": null,
-  "portraitAlt": "Retrato de Tainã Stingher",
-  "socialLinks": [],
+  "portrait": "/media/directors/taina_stingher.png",
+  "portraitAlt": "Retrato de Tainã Stinghen",
+  "socialLinks": [
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/tstinghen/"
+    }
+  ],
   "projects": [
     {
       "id": "1",
-      "title": "Projeto 01",
-      "videoUrl": "https://vimeo.com/702580022",
+      "title": "SOBREMESA",
+      "videoUrl": "https://youtube.com/shorts/vDzd5M0roMg?feature=share",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "2",
-      "title": "Projeto 02",
-      "videoUrl": "https://vimeo.com/702580022",
+      "title": "KIA",
+      "videoUrl": "https://youtu.be/AwCSUbM-sPg",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "3",
-      "title": "Projeto 03",
-      "videoUrl": "https://vimeo.com/702580022",
+      "title": "DISQUE DENUNCIA1",
+      "videoUrl": "https://youtu.be/XRH7Jz43TkE",
       "coverImage": null,
       "coverImageAlt": ""
     }

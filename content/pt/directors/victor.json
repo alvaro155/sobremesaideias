@@ -5,30 +5,41 @@
   "role": "Diretor",
   "bioTitle": "VICTOR CORAZZA",
   "bioParagraphs": [
-    "Conteúdo em atualização. A estrutura desta página já está pronta para receber bio, retrato, links e projetos pelo Pages CMS."
+    "Há um tipo de profissional que escolhe, quase por vocação, o ofício mais silencioso da casa. Victor Corazza é um deles. Começou pela edição e pela pós-produção — aquela cozinha discreta em que a história, depois de tudo, ganha o seu ritmo final — e foi ali, entre cortes e frames, que afinou o olhar para a montagem, continuidade e construção narrativa. Assinou trabalhos em publicidade, moda, cinema e indústria musical, sempre tendo a linguagem cinematográfica como espinha dorsal do ofício.",
+    "Nos últimos tempos, mergulhou na interseção entre o audiovisual tradicional e a IA generativa — aquele território novo e ainda meio sem fronteiras, em que o “feito à mão” encontra a velocidade das novas ferramentas e cada prompt funciona como uma lente nova diante da câmera.",
+    "Hoje, combina o domínio clássico da pós-produção com o repertório expandido das tecnologias emergentes para entregar conteúdos que conseguem o mais difícil: preservam a alma da narrativa enquanto exploram formas inéditas de filmar, montar e contar histórias. Porque, no fim do dia, a ferramenta muda. A boa história, não."
   ],
-  "portrait": null,
+  "portrait": "/media/directors/victor_corazza.png",
   "portraitAlt": "Retrato de Victor Corazza",
-  "socialLinks": [],
+  "socialLinks": [
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/victorcorazza/"
+    },
+    {
+      "label": "Linkedin",
+      "url": "https://www.linkedin.com/in/victorcorazza/?locale=en"
+    }
+  ],
   "projects": [
     {
       "id": "1",
-      "title": "Projeto 01",
-      "videoUrl": "https://vimeo.com/702580022",
+      "title": "OUTDOOR",
+      "videoUrl": "https://youtu.be/sXZHPtrhdRI",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "2",
-      "title": "Projeto 02",
-      "videoUrl": "https://vimeo.com/702580022",
+      "title": "ITAU VISA",
+      "videoUrl": "https://youtu.be/GjgVNmlCX0w",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "3",
-      "title": "Projeto 03",
-      "videoUrl": "https://vimeo.com/702580022",
+      "title": "WORDS",
+      "videoUrl": "https://youtu.be/6KPYE8vQ0Fc",
       "coverImage": null,
       "coverImageAlt": ""
     }

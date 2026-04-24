@@ -38,7 +38,7 @@ export type AboutPageData = {
 export type DirectorProject = {
   id: string;
   title: string;
-  videoUrl: string;
+  videoUrl?: string;
   coverImage: string | null;
   coverImageAlt: string;
 };

@@ -5,30 +5,69 @@
   "role": "Diretor",
   "bioTitle": "CAMILA FAUS",
   "bioParagraphs": [
-    "Conteúdo em atualização. A estrutura desta página já está pronta para receber bio, retrato, links e projetos pelo Pages CMS."
+    "Existe um tipo de diretora que acredita que filme bom se faz com o que se viu, não apenas com o que se sabe fazer. Camila Faus é dessas raridades. Construiu carreira em grandes produtoras — Cine, Sentimental, Hungry Man — até fundar a GOS Filmes, sua própria casa de criação. Assinou projetos para Itaú, iFood, Netflix, Bob’s e Boticário, entre tantas marcas em que a imagem precisa entregar antes mesmo de a palavra começar.",
+    "Em 2022, deu-se o luxo raro de uma pausa: deixou a publicidade em banho-maria para se dedicar de corpo inteiro ao SHE_Talks, plataforma de conteúdo voltada para mulheres 40+ que havia criado em 2019 com a sócia Maria Fernanda Guerreiro — aquele território fértil em que a idade dos “enta” rima, afinal, com experimenta.",
+    "Durante esses anos, Camila mergulhou no universo digital como quem resolve entrar no mar fundo sem bóia: foi criadora, empreendedora e, também, cliente. Agora, com o repertório renovado e uma visão ainda mais larga do comportamento de quem consome e se comunica, ela volta para o mercado trazendo, na bagagem, aquilo que só o tempo ensina."
   ],
-  "portrait": null,
+  "portrait": "/media/directors/camila_faus.png",
   "portraitAlt": "Retrato de Camila Faus",
-  "socialLinks": [],
+  "socialLinks": [
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/camilafaus/"
+    },
+    {
+      "label": "Linkedin",
+      "url": "https://www.linkedin.com/in/camila-faus-85156b180/"
+    }
+  ],
   "projects": [
     {
       "id": "1",
-      "title": "Projeto 01",
-      "videoUrl": "https://vimeo.com/702580022",
+      "title": "Mãe e Filha",
+      "videoUrl": "",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "2",
-      "title": "Projeto 02",
-      "videoUrl": "https://vimeo.com/702580022",
+      "title": "KFC The heart",
+      "videoUrl": "https://youtu.be/hnPDxuApsW8",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "3",
-      "title": "Projeto 03",
-      "videoUrl": "https://vimeo.com/702580022",
+      "title": "Netflix Maldivas",
+      "videoUrl": "https://youtu.be/4u6T3sLoYMw",
+      "coverImage": null,
+      "coverImageAlt": ""
+    },
+    {
+      "id": "4",
+      "title": "Trindent",
+      "videoUrl": "https://youtu.be/bQSpvH62__c",
+      "coverImage": null,
+      "coverImageAlt": ""
+    },
+    {
+      "id": "5",
+      "title": "NBS iFood",
+      "videoUrl": "https://youtu.be/DxitwMV2ilU",
+      "coverImage": null,
+      "coverImageAlt": ""
+    },
+    {
+      "id": "6",
+      "title": "Africa Folha",
+      "videoUrl": "https://youtu.be/Ln4HLHRiyRo",
+      "coverImage": null,
+      "coverImageAlt": ""
+    },
+    {
+      "id": "7",
+      "title": "KFC melhor frango",
+      "videoUrl": "https://youtu.be/lxKe0D79wCs",
       "coverImage": null,
       "coverImageAlt": ""
     }
