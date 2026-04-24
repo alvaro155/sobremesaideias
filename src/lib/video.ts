@@ -5,10 +5,33 @@ function extractVimeoId(url: string): string | null {
 }
 
 function extractYouTubeId(url: string): string | null {
+  try {
+    const parsedUrl = new URL(url);
+    const hostname = parsedUrl.hostname.replace(/^www\./i, "");
+    const pathParts = parsedUrl.pathname.split("/").filter(Boolean);
+
+    if (hostname === "youtu.be") {
+      return pathParts[0] ?? null;
+    }
+
+    if (hostname === "youtube.com" || hostname === "m.youtube.com") {
+      if (parsedUrl.pathname === "/watch") {
+        return parsedUrl.searchParams.get("v");
+      }
+
+      if (pathParts[0] === "embed" || pathParts[0] === "shorts") {
+        return pathParts[1] ?? null;
+      }
+    }
+  } catch {
+    // Fall back to pattern matching for pasted URLs with unusual formatting.
+  }
+
   const patterns = [
     /youtube\.com\/watch\?v=([^&]+)/i,
     /youtu\.be\/([^?&/]+)/i,
     /youtube\.com\/embed\/([^?&/]+)/i,
+    /youtube\.com\/shorts\/([^?&/]+)/i,
   ];
 
   for (const pattern of patterns) {

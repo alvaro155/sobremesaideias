@@ -5,30 +5,41 @@
   "role": "Diretor",
   "bioTitle": "BRUNO LATTES",
   "bioParagraphs": [
-    "A Sobremesa Ideias nasceu com apetite por narrativas marcantes. Misturamos cinema e rua, técnica e afeto, estética e instinto. Acreditamos que boas ideias não têm receita pronta. Só ingredientes certos, ponto de vista apurado e criatividade. Cada projeto é pensado como um prato especial: com curadoria, equilíbrio e um toque autoral. Sabemos onde temperar mais e quando servir simples. E o nome diz tudo. Sobremesa é o detalhe que surpreende. Chega no fim, mas rouba a cena. Experimente."
+    "Há alguns artistas que crescem olhando paisagem; há outros que crescem olhando pôster. Bruno Lattes é do segundo time. E isso explica quase tudo sobre o jeito dele de ver o mundo. Artista visual e diretor de arte em São Paulo, especializou-se em desenvolvimento criativo de imagem, direção de arte e animação com IA. Formado em Publicidade e com pós em Mídias Digitais, já assinou projetos para Future Creatives (Common People Films, no Reino Unido), Kartel AI (Los Angeles), Zen Digital (Amsterdã), The Stanga Show e Yoash Music — circulando com a mesma naturalidade entre publicidade, música e cinema.",
+    "A assinatura visual dele nasce do atrito — aquele encontro produtivo entre cultura pop e design, em que as paletas são ousadas, os padrões se impõem e há uma simetria firme ao lado de uma dose precisa de caos controlado. Bebe do surrealismo, da tipografia, da arte de do pôster, e do design japonês de meados do século XX, e tem referências que vão de Basquiat e Yayoi Kusama a Hockney e Warhol — gente que nunca teve medo de misturar. Hoje, seu trabalho já foi destaque em publicações como Prompt Magazine, LHC e Creative Magazine e foi exibido em Nova York, Barcelona, Madri, Hamburgo, Viena e San Francisco.",
+    "Faz algum sentido: para quem cresceu olhando pôster, ver o próprio trabalho pendurado na parede de uma galeria é mais do que uma vitória profissional — é um ciclo que se fecha. E se fecha bonito."
   ],
-  "portrait": null,
+  "portrait": "/media/directors/bruno_lattes.png",
   "portraitAlt": "Retrato de Bruno Lattes",
-  "socialLinks": [],
+  "socialLinks": [
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/brunoplattes/"
+    },
+    {
+      "label": "Linkedin",
+      "url": "https://www.linkedin.com/in/bruno-paiva-lattes-26235489/"
+    }
+  ],
   "projects": [
     {
       "id": "1",
-      "title": "Ecstase and gold",
-      "videoUrl": "https://vimeo.com/702580022",
+      "title": "GANGSTAR",
+      "videoUrl": "https://youtu.be/wkeOE7rgeC4",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "2",
-      "title": "O folclore do sertão",
-      "videoUrl": "https://vimeo.com/702580022",
+      "title": "PSYCHIC",
+      "videoUrl": "https://youtube.com/shorts/eolqhPhe1-4?feature=share",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "3",
-      "title": "Jazz",
-      "videoUrl": "https://vimeo.com/702580022",
+      "title": "JAZZ",
+      "videoUrl": "https://youtube.com/shorts/u9ueOsdknTk?feature=share",
       "coverImage": null,
       "coverImageAlt": ""
     }
