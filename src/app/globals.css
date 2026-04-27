@@ -304,6 +304,43 @@ iframe {
   color: var(--color-red);
 }
 
+.mobile-menu--open .mobile-menu__link,
+.mobile-menu--open .mobile-menu__socials li {
+  animation: mobile-menu-text-in 360ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.mobile-menu--open .mobile-menu__link:nth-child(1) {
+  animation-delay: 60ms;
+}
+
+.mobile-menu--open .mobile-menu__link:nth-child(2) {
+  animation-delay: 110ms;
+}
+
+.mobile-menu--open .mobile-menu__socials li:nth-child(1) {
+  animation-delay: 180ms;
+}
+
+.mobile-menu--open .mobile-menu__socials li:nth-child(2) {
+  animation-delay: 220ms;
+}
+
+.mobile-menu--open .mobile-menu__socials li:nth-child(3) {
+  animation-delay: 260ms;
+}
+
+@keyframes mobile-menu-text-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.65rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .contact-drawer-backdrop {
   position: fixed;
   inset: 0;
@@ -893,7 +930,9 @@ body.director-scroll-page {
   .directors-list--footer.directors-list--ready:not(.directors-list--revealed)
     .directors-list__items
     > li,
-  .directors-list--footer.directors-list--revealed .directors-list__items > li {
+  .directors-list--footer.directors-list--revealed .directors-list__items > li,
+  .mobile-menu--open .mobile-menu__link,
+  .mobile-menu--open .mobile-menu__socials li {
     opacity: 1;
     transform: none;
     animation: none;
