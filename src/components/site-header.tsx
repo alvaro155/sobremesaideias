@@ -1,6 +1,6 @@
 "use client";
 
-import type { CSSProperties } from "react";
+import type { CSSProperties, MouseEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -15,12 +15,14 @@ type SiteHeaderProps = {
 export function SiteHeader({ site }: SiteHeaderProps) {
   const pathname = usePathname();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isSvgLogo = site.logoImage?.toLowerCase().endsWith(".svg");
 
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setIsDrawerOpen(false);
+        setIsMobileMenuOpen(false);
       }
     };
 
@@ -29,10 +31,59 @@ export function SiteHeader({ site }: SiteHeaderProps) {
     return () => window.removeEventListener("keydown", handleEscape);
   }, []);
 
+  useEffect(() => {
+    document.body.classList.toggle(
+      "mobile-menu-open",
+      isMobileMenuOpen || isDrawerOpen,
+    );
+
+    return () => document.body.classList.remove("mobile-menu-open");
+  }, [isDrawerOpen, isMobileMenuOpen]);
+
+  function handleOpenContact() {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+
+    setIsMobileMenuOpen(false);
+    setIsDrawerOpen(true);
+  }
+
+  function handleMobileMenuNavigation() {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+
+    setIsMobileMenuOpen(false);
+  }
+
+  function handleMobileMenuButtonClick(event: MouseEvent<HTMLButtonElement>) {
+    event.currentTarget.blur();
+
+    if (isDrawerOpen) {
+      setIsDrawerOpen(false);
+      return;
+    }
+
+    setIsMobileMenuOpen((isOpen) => !isOpen);
+  }
+
+  function handleBrandClick(event: MouseEvent<HTMLAnchorElement>) {
+    event.currentTarget.blur();
+    setIsDrawerOpen(false);
+    setIsMobileMenuOpen(false);
+  }
+
+  const isMobileHeaderControlOpen = isMobileMenuOpen || isDrawerOpen;
+
   return (
     <>
       <header className="site-header">
-        <Link className="site-header__brand" href="/">
+        <Link
+          className="site-header__brand"
+          href="/"
+          onClick={handleBrandClick}
+        >
           {site.logoImage ? (
             isSvgLogo ? (
               <>
@@ -81,7 +132,62 @@ export function SiteHeader({ site }: SiteHeaderProps) {
             {site.header.contactLabel}
           </button>
         </nav>
+
+        <button
+          className={`site-header__menu-button${
+            isMobileHeaderControlOpen ? " site-header__menu-button--open" : ""
+          }`}
+          type="button"
+          aria-expanded={isMobileHeaderControlOpen}
+          aria-controls="mobile-menu contact-drawer"
+          onClick={handleMobileMenuButtonClick}
+        >
+          <span className="visually-hidden">
+            {isMobileHeaderControlOpen ? "Fechar menu" : "Abrir menu"}
+          </span>
+          <span className="site-header__menu-lines" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+          </span>
+        </button>
       </header>
+
+      <div
+        className={`mobile-menu${isMobileMenuOpen ? " mobile-menu--open" : ""}`}
+        id="mobile-menu"
+        aria-hidden={!isMobileMenuOpen}
+      >
+        <nav className="mobile-menu__nav" aria-label="Menu mobile">
+          <Link
+            className={`mobile-menu__link${
+              pathname === "/sobre" ? " mobile-menu__link--active" : ""
+            }`}
+            href="/sobre"
+            aria-current={pathname === "/sobre" ? "page" : undefined}
+            onClick={handleMobileMenuNavigation}
+          >
+            {site.header.aboutLabel}
+          </Link>
+          <button
+            className="mobile-menu__link"
+            type="button"
+            onClick={handleOpenContact}
+          >
+            {site.header.contactLabel}
+          </button>
+        </nav>
+
+        <ul className="mobile-menu__socials">
+          {site.socialLinks.map((link) => (
+            <li key={link.label}>
+              <a href={link.url} target="_blank" rel="noreferrer">
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
 
       <div
         className={`contact-drawer-backdrop${
@@ -94,6 +200,7 @@ export function SiteHeader({ site }: SiteHeaderProps) {
         className={`contact-drawer${
           isDrawerOpen ? " contact-drawer--open" : ""
         }`}
+        id="contact-drawer"
         aria-hidden={!isDrawerOpen}
       >
         <button

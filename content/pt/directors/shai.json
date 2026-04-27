@@ -24,10 +24,10 @@
   "projects": [
     {
       "id": "1",
-      "title": "Mãe e Filha (em breve)",
+      "title": "Mãe e Filha - em breve",
       "videoUrl": "",
-      "coverImage": null,
-      "coverImageAlt": ""
+      "coverImage": "/media/mae_e_filha_placeholder_cover.jpeg",
+      "coverImageAlt": "Imagem placeholder do projeto Mãe e Filha"
     },
     {
       "id": "2",

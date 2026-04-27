@@ -27,7 +27,7 @@ export default async function RootLayout({
   const site = await getSiteData();
 
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" data-scroll-behavior="smooth">
       <body>
         <SiteHeader site={site} />
         {children}
