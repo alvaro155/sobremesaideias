@@ -215,7 +215,6 @@ export function BackgroundVideo({
           src={embedUrl}
           title={`${title} background`}
           allow="autoplay; fullscreen; picture-in-picture"
-          allowFullScreen
         />
       ) : null}
 

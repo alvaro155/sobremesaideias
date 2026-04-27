@@ -62,7 +62,7 @@ export function VideoOverlay({
         onClick={onClose}
       >
         <span className="visually-hidden">Fechar vídeo</span>
-        <span className="ui-close ui-close--circle" aria-hidden="true" />
+        <span className="ui-close" aria-hidden="true" />
       </button>
       <div
         className="video-overlay__panel"
@@ -84,7 +84,6 @@ export function VideoOverlay({
             src={embedUrl}
             title={title}
             allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
           />
         ) : (
           <div className="video-overlay__error">
