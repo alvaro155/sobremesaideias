@@ -24,15 +24,36 @@
   "projects": [
     {
       "id": "1",
-      "title": "Showreel 1",
-      "videoUrl": "https://youtu.be/bR-UwTU2Www?si=8woinN6WGbeG-TO7",
+      "title": "AI hits",
+      "videoUrl": "https://vimeo.com/1186775706/f0e91f298e",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "2",
-      "title": "Showreel 2",
-      "videoUrl": "https://youtu.be/Rj76BrhDJOY?si=mgxmQYe9PgJhnttz",
+      "title": "Billy AI Zero",
+      "videoUrl": "https://vimeo.com/1186775000/33bd0b6ce3",
+      "coverImage": null,
+      "coverImageAlt": ""
+    },
+    {
+      "id": "3",
+      "title": "Alaska Airlines",
+      "videoUrl": "https://vimeo.com/1186776188/fd03a6bf0a",
+      "coverImage": null,
+      "coverImageAlt": ""
+    },
+    {
+      "id": "4",
+      "title": "Death of Boring",
+      "videoUrl": "https://vimeo.com/1186775707/9839a34b63",
+      "coverImage": null,
+      "coverImageAlt": ""
+    },
+    {
+      "id": "5",
+      "title": "Spec Gucci",
+      "videoUrl": "https://vimeo.com/1186775705/37661269e9",
       "coverImage": null,
       "coverImageAlt": ""
     }
