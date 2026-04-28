@@ -1185,14 +1185,14 @@ body.director-scroll-page {
 
   .contact-drawer__content h2 {
     font-size: clamp(3rem, 12vw, 3.35rem);
-    font-weight: 400;
-    letter-spacing: -0.045em;
-    text-transform: none;
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    text-transform: uppercase;
   }
 
   .contact-drawer__details {
     margin-top: 3.25rem;
-    font-size: 1.35rem;
+    font-size: 1.08rem;
     line-height: 1.2;
   }
 
@@ -1200,7 +1200,7 @@ body.director-scroll-page {
     margin-top: auto;
     padding-bottom: 0.5rem;
     gap: 0.9rem;
-    font-size: clamp(1.55rem, 6.5vw, 1.75rem);
+    font-size: clamp(1.24rem, 5.2vw, 1.4rem);
     line-height: 1.08;
   }
 

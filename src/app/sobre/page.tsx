@@ -1,6 +1,30 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 
 import { getAboutPageData, getSiteData } from "@/lib/content";
+import { siteDescription, truncateText } from "@/lib/seo";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const about = await getAboutPageData();
+  const description = truncateText(about.paragraphs[0] ?? siteDescription);
+
+  return {
+    title: about.title,
+    description,
+    alternates: {
+      canonical: "/sobre",
+    },
+    openGraph: {
+      title: `${about.title} | Sobremesa Ideias`,
+      description,
+      url: "/sobre",
+    },
+    twitter: {
+      title: `${about.title} | Sobremesa Ideias`,
+      description,
+    },
+  };
+}
 
 export default async function AboutPage() {
   const [about, site] = await Promise.all([getAboutPageData(), getSiteData()]);

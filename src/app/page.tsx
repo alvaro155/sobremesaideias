@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
+
 import { BackgroundVideo } from "@/components/background-video";
 import { DirectorsList } from "@/components/directors-list";
 import { getDirectors, getHomePageData } from "@/lib/content";
+import { siteDescription } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+  description: siteDescription,
+};
 
 export default async function HomePage() {
   const [home, directors] = await Promise.all([
