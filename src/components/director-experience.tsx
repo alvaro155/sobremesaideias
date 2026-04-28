@@ -204,21 +204,24 @@ export function DirectorExperience({
           <div className="director-bio">
             <div className="director-bio__copy">
               <h1>{director.bioTitle}</h1>
-              {director.bioParagraphs.map((paragraph) => (
-                <p key={paragraph}>{renderBioParagraph(paragraph)}</p>
-              ))}
 
-              <div className="director-bio__links">
-                {director.socialLinks.map((link) => (
-                  <a
-                    href={link.url}
-                    key={link.label}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {link.label}
-                  </a>
+              <div className="director-bio__body">
+                {director.bioParagraphs.map((paragraph) => (
+                  <p key={paragraph}>{renderBioParagraph(paragraph)}</p>
                 ))}
+
+                <div className="director-bio__links">
+                  {director.socialLinks.map((link) => (
+                    <a
+                      href={link.url}
+                      key={link.label}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
 

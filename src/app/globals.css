@@ -98,7 +98,7 @@ iframe {
   top: 50%;
   left: 50%;
   width: 100%;
-  height: 1px;
+  height: 1.1px;
   background: currentColor;
   transform-origin: center;
 }
@@ -121,7 +121,7 @@ iframe {
   inset: 0 0 auto;
   z-index: 30;
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-between;
   padding: 1.55rem var(--page-gutter);
   pointer-events: none;
@@ -182,7 +182,7 @@ iframe {
   display: flex;
   align-items: center;
   gap: 2.2rem;
-  padding-top: 0.2rem;
+  padding-bottom: 0.02rem;
 }
 
 .site-header__link {
@@ -593,11 +593,17 @@ iframe {
 }
 
 .about-page__copy h1 {
-  max-width: 24.75rem;
+  max-width: 34rem;
   font-size: clamp(2.45rem, 3.7vw, 3.5rem);
   font-weight: 400;
   letter-spacing: -0.045em;
   line-height: 1.04;
+}
+
+@media (min-width: 1300px) {
+  .about-page__copy h1 {
+    max-width: 40rem;
+  }
 }
 
 .about-page__copy p {
@@ -743,6 +749,7 @@ body.director-scroll-page {
   font-size: clamp(2rem, 3vw, 3rem);
   font-weight: 700;
   line-height: 1;
+  text-transform: none;
 }
 
 .director-section__project-link {
@@ -753,6 +760,7 @@ body.director-scroll-page {
   font-weight: 400;
   line-height: 1.04;
   text-align: left;
+  text-transform: none;
   transition: color 180ms ease;
 }
 
@@ -788,20 +796,29 @@ body.director-scroll-page {
 }
 
 .director-bio__copy {
-  display: grid;
-  align-content: center;
-  align-self: center;
-  gap: 1.65rem;
+  position: relative;
+  display: block;
+  align-self: end;
+  width: 100%;
+  height: clamp(31rem, 70vh, 39rem);
   max-width: 34rem;
-  padding: 4.2rem 0 4.6rem;
+  padding: 0 0 4.6rem;
 }
 
 .director-bio__copy h1 {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% + 1.65rem);
   font-size: clamp(2.15rem, 3vw, 3.3rem);
   font-weight: 400;
   line-height: 0.98;
   letter-spacing: -0.035em;
   text-transform: uppercase;
+}
+
+.director-bio__body {
+  display: grid;
+  gap: 1.65rem;
 }
 
 .director-bio__copy p {
@@ -873,9 +890,10 @@ body.director-scroll-page {
 
 .directors-list--footer {
   width: 100%;
-  max-width: 56rem;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
   padding: 0 var(--page-gutter);
+  padding-left: clamp(18.5rem, 27.2vw, 26rem);
 }
 
 .directors-list--footer .directors-list__label {
@@ -892,13 +910,14 @@ body.director-scroll-page {
 }
 
 .directors-list--footer .directors-list__items {
-  gap: clamp(0.75rem, 1.4vw, 1.15rem);
+  gap: 1rem;
 }
 
 .directors-list--footer .directors-list__link {
-  font-size: clamp(2.1rem, 2.4vw, 3.05rem);
-  font-weight: 300;
-  line-height: 1.02;
+  font-size: clamp(1.85rem, 2.34vw, 2.25rem);
+  font-weight: 400;
+  line-height: 0.97;
+  letter-spacing: -0.03em;
 }
 
 .directors-list--footer.directors-list--ready:not(.directors-list--revealed)
@@ -1064,6 +1083,12 @@ body.director-scroll-page {
   .director-bio__copy {
     padding-bottom: 0;
     padding-top: 0;
+    height: auto;
+  }
+
+  .director-bio__copy h1 {
+    position: static;
+    margin-bottom: 1.65rem;
   }
 
   .director-bio__portrait {
@@ -1078,6 +1103,10 @@ body.director-scroll-page {
 
   .director-section--footer {
     padding: 4.8rem 0 4.2rem;
+  }
+
+  .directors-list--footer {
+    padding-left: var(--page-gutter);
   }
 }
 
