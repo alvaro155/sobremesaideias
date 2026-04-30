@@ -20,22 +20,22 @@
   "projects": [
     {
       "id": "1",
-      "title": "SOBREMESA",
-      "videoUrl": "https://youtube.com/shorts/vDzd5M0roMg?feature=share",
+      "title": "Sobremesa",
+      "videoUrl": "https://vimeo.com/1186502077/fa507fd1a8",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "2",
-      "title": "KIA",
-      "videoUrl": "https://youtu.be/AwCSUbM-sPg",
-      "coverImage": null,
-      "coverImageAlt": ""
+      "title": "Disque Denúncia – Mãie (em breve)",
+      "videoUrl": "",
+      "coverImage": "/media/DISQUEDENUNCIA.jpeg",
+      "coverImageAlt": "Imagem placeholder do projeto Disque Denúncia – Mãie"
     },
     {
       "id": "3",
-      "title": "DISQUE DENUNCIA1",
-      "videoUrl": "https://youtu.be/XRH7Jz43TkE",
+      "title": "Disque Denúncia – Deu Errado",
+      "videoUrl": "https://vimeo.com/1186502110/e15c692e04",
       "coverImage": null,
       "coverImageAlt": ""
     }
