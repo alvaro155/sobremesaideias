@@ -24,22 +24,22 @@
   "projects": [
     {
       "id": "1",
-      "title": "SEA THAT DREAMED",
-      "videoUrl": "https://youtu.be/ZNVtR7Ea5eE",
+      "title": "Sea That Dreamed",
+      "videoUrl": "https://vimeo.com/1186501999/3655c105fd",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "2",
-      "title": "I Don't GIVE",
-      "videoUrl": "https://youtu.be/DPNytdn81PA",
+      "title": "I Don't Give",
+      "videoUrl": "https://vimeo.com/1186502008/64abf21584",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "3",
-      "title": "DREAMINA",
-      "videoUrl": "https://youtu.be/DGNrr2zwWGA",
+      "title": "Dreamina",
+      "videoUrl": "https://vimeo.com/1186502009/8a89ba9bf5",
       "coverImage": null,
       "coverImageAlt": ""
     }

@@ -24,22 +24,22 @@
   "projects": [
     {
       "id": "1",
-      "title": "HAZAKURA",
-      "videoUrl": "https://youtu.be/tKsOQZbhjdU",
+      "title": "Hazakura",
+      "videoUrl": "https://vimeo.com/1186502016/5b1d4e59fc",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "2",
-      "title": "CITRUS",
-      "videoUrl": "https://youtu.be/X3DFVQo-D0w",
+      "title": "Citrus",
+      "videoUrl": "https://vimeo.com/1186502017/ea9d8c7148",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "3",
-      "title": "FESTIVAL OF THE HEART",
-      "videoUrl": "https://youtu.be/_TxRzR0zsQs",
+      "title": "Festival of the heart",
+      "videoUrl": "https://vimeo.com/1186502017/ea9d8c7148",
       "coverImage": null,
       "coverImageAlt": ""
     }

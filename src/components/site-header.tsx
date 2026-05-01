@@ -17,6 +17,7 @@ export function SiteHeader({ site }: SiteHeaderProps) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isSvgLogo = site.logoImage?.toLowerCase().endsWith(".svg");
+  const whatsappPhone = site.contactPanel.phone.replace(/\D+/g, "");
 
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
@@ -218,7 +219,12 @@ export function SiteHeader({ site }: SiteHeaderProps) {
           <div className="contact-drawer__details">
             <p>{site.contactPanel.role}</p>
             <p className="contact-drawer__name">{site.contactPanel.name}</p>
-            <a href={`tel:${site.contactPanel.phone.replace(/\s+/g, "")}`}>
+            <a
+              href={`https://wa.me/${whatsappPhone}`}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Abrir WhatsApp para ${site.contactPanel.phone}`}
+            >
               {site.contactPanel.phone}
             </a>
             <a href={`mailto:${site.contactPanel.email}`}>

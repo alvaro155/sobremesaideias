@@ -24,22 +24,22 @@
   "projects": [
     {
       "id": "1",
-      "title": "GANGSTAR",
-      "videoUrl": "https://youtu.be/wkeOE7rgeC4",
+      "title": "Gangastar",
+      "videoUrl": "https://vimeo.com/1186501984/c34bc2090a",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "2",
-      "title": "PSYCHIC",
-      "videoUrl": "https://youtube.com/shorts/eolqhPhe1-4?feature=share",
+      "title": "Psychic",
+      "videoUrl": "https://vimeo.com/1186501981/37b1cb02d5",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "3",
-      "title": "JAZZ",
-      "videoUrl": "https://youtube.com/shorts/u9ueOsdknTk?feature=share",
+      "title": "Jazz",
+      "videoUrl": "https://vimeo.com/1186501983/c8930f1de6",
       "coverImage": null,
       "coverImageAlt": ""
     }

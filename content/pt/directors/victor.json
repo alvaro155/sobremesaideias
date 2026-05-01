@@ -24,22 +24,22 @@
   "projects": [
     {
       "id": "1",
-      "title": "OUTDOOR",
-      "videoUrl": "https://youtu.be/sXZHPtrhdRI",
+      "title": "Outdoor",
+      "videoUrl": "https://vimeo.com/1186502035/cf23dfb6c1",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "2",
-      "title": "ITAU VISA",
-      "videoUrl": "https://youtu.be/GjgVNmlCX0w",
+      "title": "Itaú Visa",
+      "videoUrl": "https://vimeo.com/1186502037/64c85e03d0",
       "coverImage": null,
       "coverImageAlt": ""
     },
     {
       "id": "3",
-      "title": "WORDS",
-      "videoUrl": "https://youtu.be/6KPYE8vQ0Fc",
+      "title": "Words",
+      "videoUrl": "https://vimeo.com/1186502049/34fa7af31d",
       "coverImage": null,
       "coverImageAlt": ""
     }
