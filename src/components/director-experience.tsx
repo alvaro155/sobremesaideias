@@ -73,6 +73,18 @@ export function DirectorExperience({
     [director.projects, selectedProjectId],
   );
 
+  const activeProjectIndex = director.projects.findIndex(
+    (project) => project.id === activeSection,
+  );
+
+  function shouldPreloadProject(projectIndex: number) {
+    if (activeProjectIndex >= 0) {
+      return Math.abs(projectIndex - activeProjectIndex) <= 1;
+    }
+
+    return activeSection === "bio" && projectIndex === director.projects.length - 1;
+  }
+
   useEffect(() => {
     document.documentElement.classList.add("director-scroll-page");
     document.body.classList.add("director-scroll-page");
@@ -144,7 +156,7 @@ export function DirectorExperience({
           </ul>
         </nav>
 
-        {director.projects.map((project) => {
+        {director.projects.map((project, projectIndex) => {
           const videoUrl = project.videoUrl ?? "";
           const hasVideo = Boolean(videoUrl.trim());
 
@@ -160,6 +172,7 @@ export function DirectorExperience({
                 videoUrl={videoUrl}
                 posterImage={project.coverImage}
                 posterAlt={project.coverImageAlt}
+                preload={hasVideo && shouldPreloadProject(projectIndex)}
               />
               <div className="director-section__tint" aria-hidden="true" />
 

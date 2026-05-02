@@ -16,6 +16,7 @@ type BackgroundVideoProps = {
   posterImage?: string | null;
   posterAlt?: string;
   eager?: boolean;
+  preload?: boolean;
   interactive?: boolean;
 };
 
@@ -31,28 +32,34 @@ export function BackgroundVideo({
   posterImage,
   posterAlt,
   eager = false,
+  preload = false,
   interactive = false,
 }: BackgroundVideoProps) {
   const frameRef = useRef<HTMLDivElement | null>(null);
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
   const controllerRef = useRef<BackgroundController | null>(null);
-  const [isActive, setIsActive] = useState(eager);
+  const shouldLoad = eager || preload;
+  const [isInView, setIsInView] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
   const embedUrl = getBackgroundEmbedUrl(videoUrl);
   const isVimeo = isVimeoUrl(videoUrl);
   const isYouTube = isYouTubeUrl(videoUrl);
+  const isActive = shouldLoad || isInView;
   const canTogglePlayback = interactive && (isVimeo || isYouTube);
 
   useEffect(() => {
-    if (eager || !frameRef.current) {
-      setIsActive(true);
+    if (shouldLoad) {
+      return;
+    }
+
+    if (!frameRef.current) {
       return;
     }
 
     // Only keep the background player mounted while its section is in view.
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsActive(entry.isIntersecting && entry.intersectionRatio >= 0.45);
+        setIsInView(entry.isIntersecting && entry.intersectionRatio >= 0.45);
       },
       {
         threshold: [0.1, 0.45, 0.8],
@@ -62,7 +69,7 @@ export function BackgroundVideo({
     observer.observe(frameRef.current);
 
     return () => observer.disconnect();
-  }, [eager]);
+  }, [shouldLoad]);
 
   useEffect(() => {
     if (!canTogglePlayback || !isActive || !iframeRef.current) {
