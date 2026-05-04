@@ -24,6 +24,8 @@ export default async function HomePage() {
         <BackgroundVideo
           eager
           interactive
+          posterImage={home.heroImage}
+          posterAlt="Cena de Mãe e Filha"
           title="Sobremesa Ideias"
           videoUrl={home.heroVideoUrl}
         />

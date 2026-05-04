@@ -24,6 +24,7 @@ export type SiteData = {
 
 export type HomePageData = {
   heroVideoUrl: string;
+  heroImage?: string | null;
   directorsLabel: string;
 };
 

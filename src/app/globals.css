@@ -648,8 +648,8 @@ iframe {
   position: fixed;
   right: max(1.55rem, calc((100vw - 1280px) / 2 + 1.55rem));
   bottom: 0;
-  width: min(53.04rem, 51.48vw);
-  height: min(24.24rem, 40.56vw);
+  width: min(66.3rem, 64.35vw);
+  height: min(30.3rem, 50.7vw);
   overflow: hidden;
   pointer-events: none;
   z-index: 0;
@@ -1070,8 +1070,8 @@ body.director-scroll-page {
     position: relative;
     right: auto;
     bottom: auto;
-    width: min(100%, 34rem);
-    height: min(20rem, 58vw);
+    width: min(100%, 42.5rem);
+    height: min(25rem, 72.5vw);
   }
 
   .director-bio {

@@ -133,7 +133,11 @@ content:
       - name: heroVideoUrl
         label: Vídeo de fundo
         type: string
-        required: true
+        required: false
+      - name: heroImage
+        label: Imagem de fundo
+        type: image
+        required: false
       - name: directorsLabel
         label: Título da lista
         type: string
