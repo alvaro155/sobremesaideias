@@ -4,6 +4,7 @@
   "logoText": "Sobremesa Ideias",
   "logoImage": "/media/logos/logo.svg",
   "header": {
+    "directorsLabel": "Diretores",
     "aboutLabel": "Sobre",
     "contactLabel": "Contato"
   },

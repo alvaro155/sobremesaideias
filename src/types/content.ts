@@ -9,6 +9,7 @@ export type SiteData = {
   logoText: string;
   logoImage: string | null;
   header: {
+    directorsLabel: string;
     aboutLabel: string;
     contactLabel: string;
   };
@@ -36,6 +37,19 @@ export type AboutPageData = {
   bottomImageAlt: string;
 };
 
+export type DirectorsPageData = {
+  title: string;
+  reelLabel: string;
+  websiteLabel: string;
+  heroBackgroundDesktop: string;
+  heroBackgroundMobile: string;
+  heroArrowImage: string | null;
+  endingBackgroundDesktop: string;
+  endingBackgroundMobile: string;
+  endingSymbolImage: string | null;
+  endingSymbolAlt: string;
+};
+
 export type DirectorProject = {
   id: string;
   title: string;
@@ -49,6 +63,7 @@ export type DirectorData = {
   order: number;
   name: string;
   role: string;
+  featuredProjectId?: string | null;
   bioTitle: string;
   bioParagraphs: string[];
   portrait: string | null;

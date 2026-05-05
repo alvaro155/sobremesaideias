@@ -126,36 +126,9 @@ export function DirectorExperience({
     return () => observer.disconnect();
   }, [director.slug]);
 
-  const navItems = [
-    ...director.projects.map((project) => ({
-      id: project.id,
-      label: project.id,
-    })),
-    { id: "bio", label: "Bio" },
-    { id: "diretores", label: "Diretores" },
-  ];
-
   return (
     <>
       <div className="director-page">
-        <nav className="director-page__bullets" aria-label="Seções do diretor">
-          <ul>
-            {navItems.map((item) => (
-              <li key={item.id}>
-                <a
-                  className={`director-page__bullet${
-                    activeSection === item.id
-                      ? " director-page__bullet--active"
-                      : ""
-                  }`}
-                  href={`#${item.id}`}
-                  aria-label={`Ir para ${item.label}`}
-                />
-              </li>
-            ))}
-          </ul>
-        </nav>
-
         {director.projects.map((project, projectIndex) => {
           const videoUrl = project.videoUrl ?? "";
           const hasVideo = Boolean(videoUrl.trim());

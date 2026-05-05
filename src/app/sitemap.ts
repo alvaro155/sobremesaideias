@@ -20,6 +20,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: absoluteUrl("/diretores"),
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
     ...directors.map((director) => ({
       url: absoluteUrl(`/${director.slug}`),
       lastModified: now,

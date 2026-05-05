@@ -83,6 +83,10 @@ content:
         label: Header
         type: object
         fields:
+          - name: directorsLabel
+            label: Rótulo Diretores
+            type: string
+            required: true
           - name: aboutLabel
             label: Rótulo Sobre
             type: string
@@ -171,6 +175,64 @@ content:
         label: Alt da imagem
         type: string
 
+  - name: diretoresPage
+    label: Diretores One Pager
+    type: file
+    path: content/pt/pages/diretores.json
+    format: json
+    fields:
+      - name: title
+        label: Título da hero
+        type: string
+        required: true
+      - name: reelLabel
+        label: Texto do link Reel
+        type: string
+        required: true
+      - name: websiteLabel
+        label: URL exibida no final mobile
+        type: string
+        required: true
+      - name: heroBackgroundDesktop
+        label: Fundo hero desktop
+        type: image
+        required: true
+        options:
+          path: onepager
+      - name: heroBackgroundMobile
+        label: Fundo hero mobile
+        type: image
+        required: true
+        options:
+          path: onepager
+      - name: heroArrowImage
+        label: Ícone seta hero
+        type: image
+        required: false
+        options:
+          path: onepager
+      - name: endingBackgroundDesktop
+        label: Fundo final desktop
+        type: image
+        required: true
+        options:
+          path: onepager
+      - name: endingBackgroundMobile
+        label: Fundo final mobile
+        type: image
+        required: true
+        options:
+          path: onepager
+      - name: endingSymbolImage
+        label: Letra S final desktop
+        type: image
+        required: false
+        options:
+          path: onepager
+      - name: endingSymbolAlt
+        label: Alt da letra S final
+        type: string
+
   - name: directors
     label: Diretores
     type: collection
@@ -202,6 +264,11 @@ content:
         label: Função
         type: string
         required: true
+      - name: featuredProjectId
+        label: Projeto destacado em /diretores
+        type: string
+        required: false
+        description: Use o ID do projeto que deve aparecer no one-pager Diretores. Se ficar vazio, o site usa o primeiro projeto com vídeo.
       - name: bioTitle
         label: Título da bio
         type: string

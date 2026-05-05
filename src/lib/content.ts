@@ -5,6 +5,7 @@ import { cache } from "react";
 import type {
   AboutPageData,
   DirectorData,
+  DirectorsPageData,
   HomePageData,
   SiteData,
 } from "@/types/content";
@@ -28,6 +29,12 @@ export const getHomePageData = cache(async () =>
 
 export const getAboutPageData = cache(async () =>
   readJsonFile<AboutPageData>(path.join(contentRoot, "pages", "sobre.json")),
+);
+
+export const getDirectorsPageData = cache(async () =>
+  readJsonFile<DirectorsPageData>(
+    path.join(contentRoot, "pages", "diretores.json"),
+  ),
 );
 
 export const getDirectors = cache(async () => {

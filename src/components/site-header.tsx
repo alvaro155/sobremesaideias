@@ -58,6 +58,19 @@ export function SiteHeader({ site }: SiteHeaderProps) {
     setIsMobileMenuOpen(false);
   }
 
+  function handleDirectorsNavigation(event: MouseEvent<HTMLAnchorElement>) {
+    event.currentTarget.blur();
+    setIsDrawerOpen(false);
+    setIsMobileMenuOpen(false);
+
+    if (pathname === "/diretores") {
+      event.preventDefault();
+      window.requestAnimationFrame(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    }
+  }
+
   function handleMobileMenuButtonClick(event: MouseEvent<HTMLButtonElement>) {
     event.currentTarget.blur();
 
@@ -117,6 +130,16 @@ export function SiteHeader({ site }: SiteHeaderProps) {
         <nav className="site-header__nav" aria-label="Principal">
           <Link
             className={`site-header__link${
+              pathname === "/diretores" ? " site-header__link--active" : ""
+            }`}
+            href="/diretores"
+            aria-current={pathname === "/diretores" ? "page" : undefined}
+            onClick={handleDirectorsNavigation}
+          >
+            {site.header.directorsLabel}
+          </Link>
+          <Link
+            className={`site-header__link${
               pathname === "/sobre" ? " site-header__link--active" : ""
             }`}
             href="/sobre"
@@ -162,6 +185,16 @@ export function SiteHeader({ site }: SiteHeaderProps) {
         <nav className="mobile-menu__nav" aria-label="Menu mobile">
           <Link
             className={`mobile-menu__link${
+              pathname === "/diretores" ? " mobile-menu__link--active" : ""
+            }`}
+            href="/diretores"
+            aria-current={pathname === "/diretores" ? "page" : undefined}
+            onClick={handleDirectorsNavigation}
+          >
+            {site.header.directorsLabel}
+          </Link>
+          <Link
+            className={`mobile-menu__link${
               pathname === "/sobre" ? " mobile-menu__link--active" : ""
             }`}
             href="/sobre"
@@ -204,6 +237,16 @@ export function SiteHeader({ site }: SiteHeaderProps) {
         id="contact-drawer"
         aria-hidden={!isDrawerOpen}
       >
+        <video
+          className="contact-drawer__video"
+          src="/media/bg.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+        />
+
         <button
           className="contact-drawer__close"
           type="button"

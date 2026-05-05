@@ -17,6 +17,7 @@ type BackgroundVideoProps = {
   posterAlt?: string;
   eager?: boolean;
   preload?: boolean;
+  persistWhenLoaded?: boolean;
   interactive?: boolean;
 };
 
@@ -33,6 +34,7 @@ export function BackgroundVideo({
   posterAlt,
   eager = false,
   preload = false,
+  persistWhenLoaded = false,
   interactive = false,
 }: BackgroundVideoProps) {
   const frameRef = useRef<HTMLDivElement | null>(null);
@@ -40,11 +42,12 @@ export function BackgroundVideo({
   const controllerRef = useRef<BackgroundController | null>(null);
   const shouldLoad = eager || preload;
   const [isInView, setIsInView] = useState(false);
+  const [hasLoadedOnce, setHasLoadedOnce] = useState(shouldLoad);
   const [isPaused, setIsPaused] = useState(false);
   const embedUrl = getBackgroundEmbedUrl(videoUrl);
   const isVimeo = isVimeoUrl(videoUrl);
   const isYouTube = isYouTubeUrl(videoUrl);
-  const isActive = shouldLoad || isInView;
+  const isActive = shouldLoad || isInView || (persistWhenLoaded && hasLoadedOnce);
   const canTogglePlayback = interactive && (isVimeo || isYouTube);
 
   useEffect(() => {
@@ -56,10 +59,16 @@ export function BackgroundVideo({
       return;
     }
 
-    // Only keep the background player mounted while its section is in view.
+    // Some pages keep players mounted after first load to avoid reloads while scrolling.
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setIsInView(entry.isIntersecting && entry.intersectionRatio >= 0.45);
+        const isVisible = entry.isIntersecting && entry.intersectionRatio >= 0.45;
+
+        setIsInView(isVisible);
+
+        if (isVisible && persistWhenLoaded) {
+          setHasLoadedOnce(true);
+        }
       },
       {
         threshold: [0.1, 0.45, 0.8],
@@ -69,7 +78,7 @@ export function BackgroundVideo({
     observer.observe(frameRef.current);
 
     return () => observer.disconnect();
-  }, [shouldLoad]);
+  }, [persistWhenLoaded, shouldLoad]);
 
   useEffect(() => {
     if (!canTogglePlayback || !isActive || !iframeRef.current) {
