@@ -465,6 +465,15 @@ iframe {
   overflow-x: clip;
 }
 
+.page--directors-index {
+  background: var(--color-petrol);
+}
+
+.directors-index {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
 .page--not-found {
   display: grid;
   place-items: center;

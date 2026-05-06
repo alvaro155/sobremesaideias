@@ -32,6 +32,7 @@ ${about.intro}
 ## Main Pages
 
 - [Home](${absoluteUrl("/")}): Lista de diretores e entrada principal da Sobremesa Ideias.
+- [Diretores](${absoluteUrl("/diretores")}): Lista dos diretores da Sobremesa Ideias.
 - [Sobre](${absoluteUrl("/sobre")}): ${about.paragraphs[0]}
 
 ## Directors

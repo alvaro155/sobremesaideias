@@ -176,7 +176,7 @@ content:
         type: string
 
   - name: diretoresPage
-    label: Diretores One Pager
+    label: Diretores Reel
     type: file
     path: content/pt/pages/diretores.json
     format: json
