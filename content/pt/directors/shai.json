@@ -24,25 +24,14 @@
   ],
   "projects": [
     {
-      "id": "1",
-      "title": "Mãe e Filha - em breve",
-      "videoUrl": "",
-      "coverImage": "/media/mae_e_filha_placeholder_cover.jpeg",
-      "coverImageAlt": "Imagem placeholder do projeto Mãe e Filha"
-    },
-    {
       "id": "2",
       "title": "AI Pilot",
-      "videoUrl": "https://vimeo.com/1186502051/cbbe79ce4d",
-      "coverImage": null,
-      "coverImageAlt": ""
+      "videoUrl": "https://vimeo.com/1186502051/cbbe79ce4d"
     },
     {
       "id": "3",
       "title": "Metromor",
-      "videoUrl": "https://vimeo.com/1186502045/5b9fae75ce",
-      "coverImage": null,
-      "coverImageAlt": ""
+      "videoUrl": "https://vimeo.com/1186502045/5b9fae75ce"
     }
   ]
 }
