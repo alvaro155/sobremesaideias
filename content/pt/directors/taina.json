@@ -21,23 +21,14 @@
     {
       "id": "1",
       "title": "Sobremesa",
-      "videoUrl": "https://vimeo.com/1186502077/fa507fd1a8",
-      "coverImage": null,
-      "coverImageAlt": ""
+      "videoUrl": "https://vimeo.com/1186502077/fa507fd1a8"
     },
     {
       "id": "2",
-      "title": "Disque Denúncia – Mãie (em breve)",
-      "videoUrl": "",
+      "title": "Disque Denúncia – Mãe",
+      "videoUrl": "https://vimeo.com/1193613607/2396c6701f ",
       "coverImage": "/media/DISQUEDENUNCIA.jpeg",
       "coverImageAlt": "Imagem placeholder do projeto Disque Denúncia – Mãie"
-    },
-    {
-      "id": "3",
-      "title": "Disque Denúncia – Deu Errado",
-      "videoUrl": "https://vimeo.com/1186502110/e15c692e04",
-      "coverImage": null,
-      "coverImageAlt": ""
     }
   ]
 }
