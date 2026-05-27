@@ -23,53 +23,34 @@
   ],
   "projects": [
     {
-      "id": "1",
-      "title": "Mãe e Filha - em breve",
-      "videoUrl": "",
-      "coverImage": "/media/mae_e_filha_placeholder_cover.jpeg",
-      "coverImageAlt": "Imagem placeholder do projeto Mãe e Filha"
-    },
-    {
       "id": "2",
       "title": "KFC The heart",
-      "videoUrl": "https://vimeo.com/1186524138/70299ad644?share=copy&fl=sv&fe=ci",
-      "coverImage": null,
-      "coverImageAlt": ""
+      "videoUrl": "https://vimeo.com/1186524138/70299ad644?share=copy&fl=sv&fe=ci"
     },
     {
       "id": "3",
       "title": "Netflix Maldivas",
-      "videoUrl": "https://vimeo.com/1186524137/2e1c91465e?share=copy&fl=sv&fe=ci",
-      "coverImage": null,
-      "coverImageAlt": ""
+      "videoUrl": "https://vimeo.com/1186524137/2e1c91465e?share=copy&fl=sv&fe=ci"
     },
     {
       "id": "4",
       "title": "Trindent",
-      "videoUrl": "https://vimeo.com/1186502066/edb3a0995d",
-      "coverImage": null,
-      "coverImageAlt": ""
+      "videoUrl": "https://vimeo.com/1186502066/edb3a0995d"
     },
     {
       "id": "5",
       "title": "NBS iFood",
-      "videoUrl": "https://vimeo.com/1186502060/d0e418ef00",
-      "coverImage": null,
-      "coverImageAlt": ""
+      "videoUrl": "https://vimeo.com/1186502060/d0e418ef00"
     },
     {
       "id": "6",
       "title": "Africa Folha",
-      "videoUrl": "https://vimeo.com/1186502067/f84a10eb62",
-      "coverImage": null,
-      "coverImageAlt": ""
+      "videoUrl": "https://vimeo.com/1186502067/f84a10eb62"
     },
     {
       "id": "7",
       "title": "KFC melhor frango",
-      "videoUrl": "https://vimeo.com/1186502064/f1cc5f4700",
-      "coverImage": null,
-      "coverImageAlt": ""
+      "videoUrl": "https://vimeo.com/1186502064/f1cc5f4700"
     }
   ]
 }
