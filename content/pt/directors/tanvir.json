@@ -25,23 +25,27 @@
     {
       "id": "1",
       "title": "Hazakura",
-      "videoUrl": "https://vimeo.com/1186502016/5b1d4e59fc",
-      "coverImage": null,
-      "coverImageAlt": ""
+      "videoUrl": "https://vimeo.com/1186502016/5b1d4e59fc"
     },
     {
       "id": "2",
-      "title": "Citrus",
-      "videoUrl": "https://vimeo.com/1186502017/ea9d8c7148",
-      "coverImage": null,
-      "coverImageAlt": ""
+      "title": "Woman Power",
+      "videoUrl": "https://vimeo.com/1190761374/a7de166814 "
     },
     {
       "id": "3",
+      "title": "Footwear Fashion",
+      "videoUrl": "https://vimeo.com/1186502032/13d2815662"
+    },
+    {
+      "id": "4",
+      "title": "Citrus",
+      "videoUrl": "https://vimeo.com/1186502017/ea9d8c7148"
+    },
+    {
+      "id": "5",
       "title": "Festival of the heart",
-      "videoUrl": "https://vimeo.com/1186502018/38f4a9866c",
-      "coverImage": null,
-      "coverImageAlt": ""
+      "videoUrl": "https://vimeo.com/1186502018/38f4a9866c"
     }
   ]
 }
