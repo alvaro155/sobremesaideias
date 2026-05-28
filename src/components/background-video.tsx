@@ -11,7 +11,7 @@ import {
 } from "@/lib/video";
 
 type BackgroundVideoProps = {
-  videoUrl: string;
+  videoUrl?: string | null;
   title: string;
   posterImage?: string | null;
   posterAlt?: string;
@@ -44,9 +44,9 @@ export function BackgroundVideo({
   const [isInView, setIsInView] = useState(false);
   const [hasLoadedOnce, setHasLoadedOnce] = useState(shouldLoad);
   const [isPaused, setIsPaused] = useState(false);
-  const embedUrl = getBackgroundEmbedUrl(videoUrl);
-  const isVimeo = isVimeoUrl(videoUrl);
-  const isYouTube = isYouTubeUrl(videoUrl);
+  const embedUrl = videoUrl ? getBackgroundEmbedUrl(videoUrl) : null;
+  const isVimeo = videoUrl ? isVimeoUrl(videoUrl) : false;
+  const isYouTube = videoUrl ? isYouTubeUrl(videoUrl) : false;
   const isActive = shouldLoad || isInView || (persistWhenLoaded && hasLoadedOnce);
   const canTogglePlayback = interactive && (isVimeo || isYouTube);
 

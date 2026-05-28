@@ -24,9 +24,9 @@ export type SiteData = {
 };
 
 export type HomePageData = {
-  heroVideoUrl: string;
+  heroVideoUrl?: string | null;
   heroImage?: string | null;
-  directorsLabel: string;
+  directorsLabel?: string;
 };
 
 export type AboutPageData = {
