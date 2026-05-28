@@ -3,6 +3,7 @@
   "studioName": "Sobremesa Ideias",
   "logoText": "Sobremesa Ideias",
   "logoImage": "/media/logos/logo.svg",
+  "faviconImage": "/media/logos/favicon.png",
   "header": {
     "directorsLabel": "Diretores",
     "aboutLabel": "Sobre",
@@ -13,7 +14,8 @@
     "role": "Sócio & Produtor Executivo",
     "name": "Alvaro Pacheco",
     "phone": "+55 11 99982 4890",
-    "email": "alvaro@sobremesaideias.com.br"
+    "email": "alvaro@sobremesaideias.com.br",
+    "backgroundVideo": "/media/bg2.mp4"
   },
   "socialLinks": [
     {

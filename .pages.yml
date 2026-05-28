@@ -79,6 +79,12 @@ content:
         required: false
         options:
           path: logos
+      - name: faviconImage
+        label: Favicon
+        type: image
+        required: false
+        options:
+          path: logos
       - name: header
         label: Header
         type: object
@@ -119,6 +125,11 @@ content:
             label: Email
             type: string
             required: true
+          - name: backgroundVideo
+            label: Vídeo de fundo
+            type: string
+            required: false
+            description: Caminho do vídeo no site, por exemplo /media/bg2.mp4.
       - name: socialLinks
         label: Links sociais
         component: social_link

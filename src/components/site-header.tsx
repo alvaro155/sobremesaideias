@@ -18,6 +18,7 @@ export function SiteHeader({ site }: SiteHeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isSvgLogo = site.logoImage?.toLowerCase().endsWith(".svg");
   const whatsappPhone = site.contactPanel.phone.replace(/\D+/g, "");
+  const contactBackgroundVideo = site.contactPanel.backgroundVideo || "/media/bg.mp4";
 
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
@@ -239,7 +240,7 @@ export function SiteHeader({ site }: SiteHeaderProps) {
       >
         <video
           className="contact-drawer__video"
-          src="/media/bg.mp4"
+          src={contactBackgroundVideo}
           autoPlay
           muted
           loop

@@ -7,39 +7,44 @@ import { absoluteUrl, siteDescription, siteUrl } from "@/lib/seo";
 
 import "./globals.css";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: {
-    default: "Sobremesa Ideias",
-    template: "%s | Sobremesa Ideias",
-  },
-  description: siteDescription,
-  applicationName: "Sobremesa Ideias",
-  authors: [{ name: "Sobremesa Ideias" }],
-  creator: "Sobremesa Ideias",
-  publisher: "Sobremesa Ideias",
-  alternates: {
-    canonical: "/",
-  },
-  openGraph: {
-    title: "Sobremesa Ideias",
+export async function generateMetadata(): Promise<Metadata> {
+  const site = await getSiteData();
+  const faviconImage = site.faviconImage ?? "/media/logos/favicon.png";
+
+  return {
+    metadataBase: new URL(siteUrl),
+    title: {
+      default: "Sobremesa Ideias",
+      template: "%s | Sobremesa Ideias",
+    },
     description: siteDescription,
-    url: siteUrl,
-    siteName: "Sobremesa Ideias",
-    locale: "pt_BR",
-    type: "website",
-  },
-  twitter: {
-    card: "summary",
-    title: "Sobremesa Ideias",
-    description: siteDescription,
-  },
-  icons: {
-    icon: "/media/logos/favicon.png",
-    shortcut: "/media/logos/favicon.png",
-    apple: "/media/logos/favicon.png",
-  },
-};
+    applicationName: "Sobremesa Ideias",
+    authors: [{ name: "Sobremesa Ideias" }],
+    creator: "Sobremesa Ideias",
+    publisher: "Sobremesa Ideias",
+    alternates: {
+      canonical: "/",
+    },
+    openGraph: {
+      title: "Sobremesa Ideias",
+      description: siteDescription,
+      url: siteUrl,
+      siteName: "Sobremesa Ideias",
+      locale: "pt_BR",
+      type: "website",
+    },
+    twitter: {
+      card: "summary",
+      title: "Sobremesa Ideias",
+      description: siteDescription,
+    },
+    icons: {
+      icon: faviconImage,
+      shortcut: faviconImage,
+      apple: faviconImage,
+    },
+  };
+}
 
 export default async function RootLayout({
   children,

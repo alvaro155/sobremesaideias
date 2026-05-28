@@ -8,6 +8,7 @@ export type SiteData = {
   studioName: string;
   logoText: string;
   logoImage: string | null;
+  faviconImage?: string | null;
   header: {
     directorsLabel: string;
     aboutLabel: string;
@@ -19,6 +20,7 @@ export type SiteData = {
     name: string;
     phone: string;
     email: string;
+    backgroundVideo?: string | null;
   };
   socialLinks: SocialLink[];
 };
