@@ -1,0 +1,249 @@
+{
+  "reference": "public/media/IMG_5174.png",
+  "aspect_ratio": "16:9",
+  "resolution": "2k",
+  "model": "nano_banana_2",
+  "count": 30,
+  "variations": [
+    {
+      "id": "var_01",
+      "subject": "A silver-haired woman in her seventies with thick black-framed glasses",
+      "wardrobe": "A black wool turtleneck and a heavy strand of dark wooden beads",
+      "scenario": "a faint doorway",
+      "prompt_file": "Human Images/output/banco-img5174/var_01/prompt.txt",
+      "chars": 1487
+    },
+    {
+      "id": "var_02",
+      "subject": "A young man with a shaved head and a short dark beard",
+      "wardrobe": "A dark heavy wool overcoat with the collar turned up",
+      "scenario": "drifting stage haze",
+      "prompt_file": "Human Images/output/banco-img5174/var_02/prompt.txt",
+      "chars": 1455
+    },
+    {
+      "id": "var_03",
+      "subject": "A Black man in his fifties with a close-cropped grey beard",
+      "wardrobe": "A charcoal henley, top button open",
+      "scenario": "a dim studio flat",
+      "prompt_file": "Human Images/output/banco-img5174/var_03/prompt.txt",
+      "chars": 1432
+    },
+    {
+      "id": "var_04",
+      "subject": "A young woman with long straight dark hair parted in the centre",
+      "wardrobe": "A black satin slip dress with thin straps",
+      "scenario": "a curtained window",
+      "prompt_file": "Human Images/output/banco-img5174/var_04/prompt.txt",
+      "chars": 1450
+    },
+    {
+      "id": "var_05",
+      "subject": "An elderly man with deep facial lines under a flat cap",
+      "wardrobe": "A dark double-breasted peacoat",
+      "scenario": "a bare brick wall",
+      "prompt_file": "Human Images/output/banco-img5174/var_05/prompt.txt",
+      "chars": 1438
+    },
+    {
+      "id": "var_06",
+      "subject": "An androgynous person with a sleek jaw-length bob",
+      "wardrobe": "A high-necked black silk blouse",
+      "scenario": "soft rolling haze",
+      "prompt_file": "Human Images/output/banco-img5174/var_06/prompt.txt",
+      "chars": 1431
+    },
+    {
+      "id": "var_07",
+      "subject": "A teenage girl with freckles and dark curly hair",
+      "wardrobe": "A dark oversized hoodie, drawstrings loose",
+      "scenario": "a dim hallway",
+      "prompt_file": "Human Images/output/banco-img5174/var_07/prompt.txt",
+      "chars": 1427
+    },
+    {
+      "id": "var_08",
+      "subject": "A weathered fisherman in his sixties with a salt-grey beard",
+      "wardrobe": "A thick dark cable-knit sweater",
+      "scenario": "a low workshop beam",
+      "prompt_file": "Human Images/output/banco-img5174/var_08/prompt.txt",
+      "chars": 1435
+    },
+    {
+      "id": "var_09",
+      "subject": "A ballet dancer with her hair pulled into a tight bun",
+      "wardrobe": "A dark long-sleeved leotard",
+      "scenario": "a smeared barre line",
+      "prompt_file": "Human Images/output/banco-img5174/var_09/prompt.txt",
+      "chars": 1440
+    },
+    {
+      "id": "var_10",
+      "subject": "A long-haired musician with stubble in his thirties",
+      "wardrobe": "A worn black leather jacket over a dark tee",
+      "scenario": "a smoky club rail",
+      "prompt_file": "Human Images/output/banco-img5174/var_10/prompt.txt",
+      "chars": 1447
+    },
+    {
+      "id": "var_11",
+      "subject": "A South Asian woman with a small gold nose ring and a dark braid",
+      "wardrobe": "A dark draped shawl over one shoulder",
+      "scenario": "a hanging fabric edge",
+      "prompt_file": "Human Images/output/banco-img5174/var_11/prompt.txt",
+      "chars": 1447
+    },
+    {
+      "id": "var_12",
+      "subject": "An East Asian elder with thin wire glasses and white hair",
+      "wardrobe": "A dark mandarin-collar jacket",
+      "scenario": "a paper screen seam",
+      "prompt_file": "Human Images/output/banco-img5174/var_12/prompt.txt",
+      "chars": 1433
+    },
+    {
+      "id": "var_13",
+      "subject": "A young boxer with sweat on the brow and a strong jaw",
+      "wardrobe": "A dark sleeveless training top",
+      "scenario": "a gym corner shadow",
+      "prompt_file": "Human Images/output/banco-img5174/var_13/prompt.txt",
+      "chars": 1441
+    },
+    {
+      "id": "var_14",
+      "subject": "A woman in a dark headscarf framing a calm face",
+      "wardrobe": "A flowing dark abaya",
+      "scenario": "a latticed shadow",
+      "prompt_file": "Human Images/output/banco-img5174/var_14/prompt.txt",
+      "chars": 1417
+    },
+    {
+      "id": "var_15",
+      "subject": "A pierced punk in their twenties with a bleached crop",
+      "wardrobe": "A studded dark denim jacket",
+      "scenario": "drifting cigarette haze",
+      "prompt_file": "Human Images/output/banco-img5174/var_15/prompt.txt",
+      "chars": 1427
+    },
+    {
+      "id": "var_16",
+      "subject": "An opera singer mid-breath with an upswept hairstyle",
+      "wardrobe": "A dark velvet gown with a structured shoulder",
+      "scenario": "a heavy stage drape",
+      "prompt_file": "Human Images/output/banco-img5174/var_16/prompt.txt",
+      "chars": 1445
+    },
+    {
+      "id": "var_17",
+      "subject": "An ageing professor with tousled grey hair",
+      "wardrobe": "A dark tweed blazer over a knit waistcoat",
+      "scenario": "a wall of dim spines",
+      "prompt_file": "Human Images/output/banco-img5174/var_17/prompt.txt",
+      "chars": 1446
+    },
+    {
+      "id": "var_18",
+      "subject": "A pregnant woman with both hands resting on her belly",
+      "wardrobe": "Dark jersey fabric draped across the form",
+      "scenario": "a soft curtain fold",
+      "prompt_file": "Human Images/output/banco-img5174/var_18/prompt.txt",
+      "chars": 1446
+    },
+    {
+      "id": "var_19",
+      "subject": "A soldier-type with cropped hair and three-day stubble",
+      "wardrobe": "A dark field jacket, collar up",
+      "scenario": "low drifting smoke",
+      "prompt_file": "Human Images/output/banco-img5174/var_19/prompt.txt",
+      "chars": 1425
+    },
+    {
+      "id": "var_20",
+      "subject": "A drag artist with sculpted brows and a sleek wig",
+      "wardrobe": "A dark sequined wrap catching a single edge",
+      "scenario": "rolling theatrical haze",
+      "prompt_file": "Human Images/output/banco-img5174/var_20/prompt.txt",
+      "chars": 1444
+    },
+    {
+      "id": "var_21",
+      "subject": "An Indigenous elder with deep-set eyes and long grey hair",
+      "wardrobe": "A dark woven wrap over the shoulders",
+      "scenario": "a faint woven texture",
+      "prompt_file": "Human Images/output/banco-img5174/var_21/prompt.txt",
+      "chars": 1453
+    },
+    {
+      "id": "var_22",
+      "subject": "A chef with a shaved head and a focused gaze",
+      "wardrobe": "A dark cross-tied apron over a tee",
+      "scenario": "a dim kitchen pass",
+      "prompt_file": "Human Images/output/banco-img5174/var_22/prompt.txt",
+      "chars": 1428
+    },
+    {
+      "id": "var_23",
+      "subject": "A violinist caught at the top of a bow stroke",
+      "wardrobe": "A dark fitted blouse, sleeve pushed up",
+      "scenario": "a smeared bow arc",
+      "prompt_file": "Human Images/output/banco-img5174/var_23/prompt.txt",
+      "chars": 1429
+    },
+    {
+      "id": "var_24",
+      "subject": "A shaven-headed monk with a serene expression",
+      "wardrobe": "A coarse dark robe over one shoulder",
+      "scenario": "a single low candle glow",
+      "prompt_file": "Human Images/output/banco-img5174/var_24/prompt.txt",
+      "chars": 1432
+    },
+    {
+      "id": "var_25",
+      "subject": "A fashion model with sharp cheekbones and slicked hair",
+      "wardrobe": "A dark structured coat with a high collar",
+      "scenario": "a seamless dark sweep",
+      "prompt_file": "Human Images/output/banco-img5174/var_25/prompt.txt",
+      "chars": 1455
+    },
+    {
+      "id": "var_26",
+      "subject": "A widow in mourning with a fine veil over her hair",
+      "wardrobe": "Black lace over a dark high-necked dress",
+      "scenario": "a draped black tulle",
+      "prompt_file": "Human Images/output/banco-img5174/var_26/prompt.txt",
+      "chars": 1443
+    },
+    {
+      "id": "var_27",
+      "subject": "A street poet in a knit beanie with a thoughtful look",
+      "wardrobe": "A dark scarf wound twice around the neck",
+      "scenario": "a foggy alley mouth",
+      "prompt_file": "Human Images/output/banco-img5174/var_27/prompt.txt",
+      "chars": 1436
+    },
+    {
+      "id": "var_28",
+      "subject": "A field scientist with windburned skin and tied-back hair",
+      "wardrobe": "A dark collared field shirt",
+      "scenario": "a dim equipment rack",
+      "prompt_file": "Human Images/output/banco-img5174/var_28/prompt.txt",
+      "chars": 1436
+    },
+    {
+      "id": "var_29",
+      "subject": "A solemn child of about eight holding a wooden toy",
+      "wardrobe": "A dark crew-neck sweater",
+      "scenario": "a soft nursery shadow",
+      "prompt_file": "Human Images/output/banco-img5174/var_29/prompt.txt",
+      "chars": 1434
+    },
+    {
+      "id": "var_30",
+      "subject": "A retired ballerina in her eighties with thin upswept hair",
+      "wardrobe": "A dark fringed shawl over bare shoulders",
+      "scenario": "drifting dust in the beam",
+      "prompt_file": "Human Images/output/banco-img5174/var_30/prompt.txt",
+      "chars": 1456
+    }
+  ]
+}
