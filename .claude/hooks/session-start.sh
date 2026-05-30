@@ -11,6 +11,11 @@ fi
 
 cd "${CLAUDE_PROJECT_DIR:-.}"
 
+# Run asynchronously: the session starts immediately while setup continues in
+# the background. Note the trade-off — Claude may briefly run before deps are
+# ready. The JSON directive must be the first thing printed to stdout.
+echo '{"async": true, "asyncTimeout": 300000}'
+
 ENV_FILE="${CLAUDE_ENV_FILE:-/dev/null}"
 
 # --- Project dependencies (Next.js / npm) ---------------------------------
