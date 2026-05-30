@@ -54,8 +54,20 @@ if [ -n "${HIGGSFIELD_API_KEY:-}" ]; then
     eval "$HIGGSFIELD_LOGIN_CMD" || echo "warning: higgsfield login failed"
   fi
 
+  # Quick smoke test so you can confirm the credentials "took". Override the
+  # probe with HIGGSFIELD_VERIFY_CMD (e.g. "higgsfield whoami"); defaults to a
+  # version check. Purely informational — never fails the session.
   if command -v higgsfield >/dev/null 2>&1; then
     echo "Higgsfield CLI ready: $(command -v higgsfield)"
+    verify_cmd="${HIGGSFIELD_VERIFY_CMD:-higgsfield --version}"
+    echo "Verifying Higgsfield CLI: ${verify_cmd}"
+    if eval "$verify_cmd" >/dev/null 2>&1; then
+      echo "✅ Higgsfield CLI verified — /image render is ready."
+    else
+      echo "‼️ Higgsfield CLI present but '${verify_cmd}' failed — check the API key, login command, or network policy."
+    fi
+  else
+    echo "‼️ Higgsfield CLI not on PATH after setup — check HIGGSFIELD_CLI_INSTALL_CMD."
   fi
 else
   echo "note: HIGGSFIELD_API_KEY not set; skipping Higgsfield CLI setup (/image render disabled)"
