@@ -1439,15 +1439,52 @@ body.director-scroll-page {
       max(1.35rem, calc(env(safe-area-inset-bottom) + 1rem));
   }
 
+  .page--home {
+    position: relative;
+    min-height: 100svh;
+    min-height: 100dvh;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
   .home-hero {
     min-height: 100svh;
     min-height: 100dvh;
+    height: 100svh;
     height: 100dvh;
+    overflow: hidden;
+  }
+
+  .home-hero > .video-stage,
+  .home-hero__shade {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100svh;
+    height: 100dvh;
+  }
+
+  .home-hero > .video-stage {
+    z-index: 0;
+  }
+
+  .home-hero__shade {
+    z-index: 1;
+  }
+
+  .home-hero .video-stage__frame {
+    width: 177.7778svh;
+    width: 177.7778dvh;
+    min-width: 100vw;
+    min-height: 100svh;
+    min-height: 100dvh;
   }
 
   .about-page {
     display: flex;
     flex-direction: column;
+    row-gap: 1.35rem;
+    padding-top: clamp(8.4rem, 18vh, 10.5rem);
     padding-bottom: 0;
   }
 
@@ -1466,6 +1503,10 @@ body.director-scroll-page {
   .about-page__art {
     align-self: end;
     order: 1;
+    width: 100vw;
+    max-width: none;
+    height: clamp(10.5rem, 48vw, 17.5rem);
+    margin-right: calc(-1 * var(--page-gutter));
   }
 
   .directors-list__link {
