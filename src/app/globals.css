@@ -1446,11 +1446,26 @@ body.director-scroll-page {
   }
 
   .about-page {
+    display: flex;
+    flex-direction: column;
     padding-bottom: 0;
+  }
+
+  .about-page__copy {
+    order: 2;
+  }
+
+  .about-page__aside {
+    display: contents;
+  }
+
+  .about-page__socials {
+    order: 3;
   }
 
   .about-page__art {
     align-self: end;
+    order: 1;
   }
 
   .directors-list__link {
