@@ -1,0 +1,14 @@
+{
+  "slug": "sbms",
+  "order": 10,
+  "name": "Originals",
+  "role": "Diretor",
+  "bioTitle": "Originais SobremesaIdeias",
+  "projects": [
+    {
+      "id": "1",
+      "title": "Salmo 91",
+      "videoUrl": "https://vimeo.com/1198227642/cbabcc5f9a "
+    }
+  ]
+}
