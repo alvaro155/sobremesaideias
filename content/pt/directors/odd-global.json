@@ -1,0 +1,34 @@
+{
+  "slug": "odd",
+  "order": 10,
+  "name": "Odd Global",
+  "role": "Diretor",
+  "featuredProjectId": "1",
+  "bioTitle": "ODD GLOBAL",
+  "bioParagraphs": [
+    "Studio audiovisual da Nova Zelândia com experiência global"
+  ],
+  "portrait": "/media/logo_redessociais_Prancheta 1 cópia 3 2.png",
+  "socialLinks": [
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/odd.global/"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/company/odd-global/"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Salmo 91",
+      "videoUrl": "https://vimeo.com/1198227642/cbabcc5f9a "
+    },
+    {
+      "id": "2",
+      "title": "Coloreti Nuvem",
+      "videoUrl": "https://vimeo.com/1198904623/219d8a76ba"
+    }
+  ]
+}
