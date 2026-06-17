@@ -83,7 +83,8 @@ export function VideoOverlay({
             className="video-overlay__frame"
             src={embedUrl}
             title={title}
-            allow="autoplay; fullscreen; picture-in-picture"
+            allow="autoplay; encrypted-media; fullscreen; picture-in-picture"
+            allowFullScreen
           />
         ) : (
           <div className="video-overlay__error">

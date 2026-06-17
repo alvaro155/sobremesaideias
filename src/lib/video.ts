@@ -121,6 +121,8 @@ export function getPlayerEmbedUrl(url: string): string | null {
   if (vimeoInfo) {
     const params = new URLSearchParams({
       autoplay: "1",
+      muted: "0",
+      controls: "1",
       title: "0",
       byline: "0",
       portrait: "0",
@@ -136,7 +138,7 @@ export function getPlayerEmbedUrl(url: string): string | null {
   const youTubeId = extractYouTubeId(url);
 
   if (youTubeId) {
-    return `https://www.youtube.com/embed/${youTubeId}?autoplay=1&playsinline=1&rel=0`;
+    return `https://www.youtube.com/embed/${youTubeId}?autoplay=1&mute=0&controls=1&playsinline=1&rel=0`;
   }
 
   return null;
