@@ -20,14 +20,14 @@
   "projects": [
     {
       "id": "1",
-      "title": "Sobremesa",
-      "videoUrl": "https://vimeo.com/1186502077/fa507fd1a8"
+      "title": "Disque Denúncia RJ – Mãe",
+      "videoUrl": "https://vimeo.com/1192697139/c89ffa7134",
+      "coverImageAlt": "Imagem placeholder do projeto Disque Denúncia – Mãie"
     },
     {
       "id": "2",
-      "title": "Disque Denúncia – Mãe",
-      "videoUrl": "https://vimeo.com/1192697139/c89ffa7134",
-      "coverImageAlt": "Imagem placeholder do projeto Disque Denúncia – Mãie"
+      "title": "Sobremesa",
+      "videoUrl": "https://vimeo.com/1186502077/fa507fd1a8"
     }
   ]
 }
