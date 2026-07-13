@@ -23,8 +23,8 @@
   ],
   "projects": [
     {
-      "id": "1",
-      "title": "Jaecco 7",
+      "id": "7",
+      "title": "Jaecco",
       "videoUrl": "https://vimeo.com/1200454940/709c7b90d8?share=copy&fl=sv&fe=ci"
     },
     {
@@ -51,6 +51,11 @@
       "id": "6",
       "title": "Spec Gucci",
       "videoUrl": "https://vimeo.com/1186775705/37661269e9"
+    },
+    {
+      "id": "1",
+      "title": "Light Phone",
+      "videoUrl": "https://vimeo.com/1209511453/82e6657aa8?share=copy&fl=sv&fe=ci"
     }
   ]
 }
