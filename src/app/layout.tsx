@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 
 import { JsonLd } from "@/components/json-ld";
 import { SiteHeader } from "@/components/site-header";
@@ -68,6 +69,7 @@ export default async function RootLayout({
       <body>
         <JsonLd data={organizationJsonLd} />
         <SiteHeader site={site} />
+        <Analytics />
         {children}
       </body>
     </html>
