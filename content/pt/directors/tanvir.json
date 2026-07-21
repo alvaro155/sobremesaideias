@@ -25,8 +25,8 @@
   "projects": [
     {
       "id": "1",
-      "title": "Hazakura",
-      "videoUrl": "https://vimeo.com/1186502016/5b1d4e59fc"
+      "title": "The Long Afternoon",
+      "videoUrl": "https://vimeo.com/1211814202/8245aad4d0"
     },
     {
       "id": "2",
@@ -47,6 +47,11 @@
       "id": "5",
       "title": "Festival of the heart",
       "videoUrl": "https://vimeo.com/1186502018/38f4a9866c"
+    },
+    {
+      "id": "6",
+      "title": "Hazakura",
+      "videoUrl": "https://vimeo.com/1186502016/5b1d4e59fc"
     }
   ]
 }
