@@ -1,0 +1,40 @@
+{
+  "slug": "1",
+  "order": 4,
+  "name": "Henri Bassil",
+  "role": "Diretor",
+  "featuredProjectId": "1",
+  "bioTitle": "HENRI BASSIL",
+  "socialLinks": [
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/henribassil/"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/henri-bassil-730b24165/"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Porsche Fury of Nature",
+      "videoUrl": "https://vimeo.com/1214275730/0b0ed94309"
+    },
+    {
+      "id": "2",
+      "title": "Hilton Rolling",
+      "videoUrl": "https://vimeo.com/1214277671/ef6872fec5"
+    },
+    {
+      "id": "3",
+      "title": "Chat GPT",
+      "videoUrl": "https://vimeo.com/1214275385/3c0be9d814"
+    },
+    {
+      "id": "4",
+      "title": "Ethiad",
+      "videoUrl": "https://vimeo.com/1214277649/3e4d8688a3"
+    }
+  ]
+}
