@@ -25,7 +25,7 @@
   "projects": [
     {
       "id": "1",
-      "title": "The Good Boy",
+      "title": "Bom Garoto",
       "videoUrl": "https://vimeo.com/1218345969/300f37a6c2"
     },
     {
@@ -70,12 +70,12 @@
     },
     {
       "id": "10",
-      "title": "The Last Warm Day",
+      "title": "Nosso Último dia",
       "videoUrl": "https://vimeo.com/1218325418/73011680f9"
     },
     {
       "id": "11",
-      "title": "The Men We Were",
+      "title": "Homens que Fomos",
       "videoUrl": "https://vimeo.com/1218360037/8d0138d9da"
     }
   ]
