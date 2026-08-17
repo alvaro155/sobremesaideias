@@ -1,0 +1,31 @@
+{
+  "slug": "1",
+  "order": 11,
+  "name": "João Seiça",
+  "role": "Diretor",
+  "featuredProjectId": "1",
+  "bioTitle": "JOÃO SEIÇA",
+  "bioParagraphs": [
+    "Física explica como o mundo funciona. Direção de ator, como as pessoas sentem. João Seiça estudou as 2, nessa ordem: graduação em Engenharia Física, mestrado em Direção de Cinema pelo Drama Centre London, na Central Saint Martins. A combinação define o método: direção de ator de um lado, integração de ferramentas generativas no processo de produção do outro. Radicado em Lisboa, trabalha em IA, live action e híbrido.",
+    "Assinou a campanha oficial de Portugal para a Copa do Mundo de 2026, para a Federação Portuguesa de Futebol, com mais de 90 milhões de visualizações. Dirigiu \"Aqui Há Gato\", série do Pingo Doce que passou de 48 milhões de visualizações em Portugal e ficou entre as 3 melhores campanhas de abril de 2026 segundo a Marketeer. Para o FC Porto, dirigiu a homenagem \"Camisola do Presidente dos Presidentes\", com tiragem esgotada em 100 minutos e indicação no Clube dos Criativos. No Clube dos Criativos 2026, recebeu Prata na categoria IA em Vídeo, com 3 indicações em 2 categorias. Foi finalista do Gen:48, competição internacional de cinema com IA da Runway.",
+    "Hoje desenvolve INHALE, série de ficção com apoio da RTP. Talvez seja essa a leitura mais honesta do seu trabalho: cinema sempre foi física a serviço da emoção. João só estudou os 2 lados antes de juntar."
+  ],
+  "portrait": "/media/fotos - 00000002.jpg",
+  "socialLinks": [
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/joaoseica/"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/joaoseica/"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "FPF",
+      "videoUrl": "https://vimeo.com/1218378127/2a02f5ec4d"
+    }
+  ]
+}
