@@ -71,6 +71,7 @@ export default async function RootLayout({
         <SiteHeader site={site} />
         <Analytics />
         {children}
+        <Analytics />
       </body>
     </html>
   );
