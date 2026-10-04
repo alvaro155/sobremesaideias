@@ -115,7 +115,9 @@
   .affix input:first-child { border-radius: 3px 0 0 3px; }
 
   /* CHIPS */
-  .chips { display: flex; flex-wrap: wrap; gap: 10px; align-self: start; }
+  .chips { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; align-self: start; }
+  .chips .affix { flex: 1 1 190px; max-width: 300px; }
+  .chips .affix input { padding: 8px 12px; font-size: 14px; }
   .chip { position: relative; display: inline-block; }
   .chip input { position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; }
   .chip span {
@@ -244,6 +246,10 @@
         <div><label class="lbl" for="email">E-mail do lead<span class="req" aria-hidden="true">*</span></label><p class="hint">Para onde vai a proposta.</p></div>
         <input type="email" id="email" name="email" placeholder="nome@empresa.com.br" required aria-required="true" autocomplete="email">
       </div>
+      <div class="row" data-label="Gerou cliente">
+        <div><label class="lbl" for="gerou_cliente">Gerou cliente</label></div>
+        <input type="text" id="gerou_cliente" name="gerou_cliente" placeholder="Nome">
+      </div>
     </section>
 
     <!-- 2 · PROJETO -->
@@ -264,6 +270,10 @@
       <div class="row" data-label="Objetivo da campanha">
         <div><label class="lbl" for="objetivo">Objetivo da campanha</label><p class="hint">O que a campanha precisa mover. Lembrança, consideração, venda, lançamento.</p></div>
         <textarea id="objetivo" name="objetivo"></textarea>
+      </div>
+      <div class="row" data-label="Opcionais">
+        <div><label class="lbl" for="opcionais">Opcionais</label></div>
+        <textarea id="opcionais" name="opcionais"></textarea>
       </div>
     </section>
 
@@ -314,6 +324,7 @@
           <label class="chip"><input type="radio" name="master" value="60"><span>60″</span></label>
           <label class="chip"><input type="radio" name="master" value="30"><span>30″</span></label>
           <label class="chip"><input type="radio" name="master" value="15"><span>15″</span></label>
+          <div class="affix"><span class="tag pre">Outros</span><input type="text" name="master_outros" aria-label="Secundagem master, outros"></div>
         </div>
       </div>
       <div class="row" data-label="Reduções" role="group" aria-labelledby="l-reducoes">
@@ -322,6 +333,7 @@
           <label class="chip"><input type="checkbox" name="reducoes" value="30"><span>30″</span></label>
           <label class="chip"><input type="checkbox" name="reducoes" value="15"><span>15″</span></label>
           <label class="chip"><input type="checkbox" name="reducoes" value="5"><span>5″</span></label>
+          <div class="affix"><span class="tag pre">Outros</span><input type="text" name="reducoes_outros" aria-label="Reduções, outros"></div>
         </div>
       </div>
       <div class="row" data-label="Janela" role="group" aria-labelledby="l-janela">
@@ -330,6 +342,7 @@
           <label class="chip"><input type="checkbox" name="janela" value="16:9"><span>16:9</span></label>
           <label class="chip"><input type="checkbox" name="janela" value="9:16"><span>9:16</span></label>
           <label class="chip"><input type="checkbox" name="janela" value="1:1"><span>1:1</span></label>
+          <div class="affix"><span class="tag pre">Outros</span><input type="text" name="janela_outros" aria-label="Janela, outros"></div>
         </div>
       </div>
     </section>
@@ -353,6 +366,21 @@
           <label class="chip"><input type="checkbox" name="midias" value="interno"><span>Interno</span></label>
         </div>
       </div>
+      <div class="row" data-label="Ancine" role="radiogroup" aria-labelledby="l-ancine">
+        <div><span class="lbl" id="l-ancine">Ancine</span></div>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="ancine" value="aberta"><span>TV aberta</span></label>
+          <label class="chip"><input type="radio" name="ancine" value="fechada"><span>TV fechada</span></label>
+          <label class="chip"><input type="radio" name="ancine" value="todos"><span>Todos</span></label>
+        </div>
+      </div>
+      <div class="row" data-label="Praça" role="radiogroup" aria-labelledby="l-praca">
+        <div><span class="lbl" id="l-praca">Praça</span></div>
+        <div class="chips">
+          <label class="chip"><input type="radio" name="praca" value="nacional"><span>Nacional</span></label>
+          <label class="chip"><input type="radio" name="praca" value="regional"><span>Regional</span></label>
+        </div>
+      </div>
     </section>
 
     <!-- 7 · SOM -->
@@ -363,6 +391,7 @@
         <div class="chips">
           <label class="chip"><input type="radio" name="trilha" value="sim"><span>Sim</span></label>
           <label class="chip"><input type="radio" name="trilha" value="nao"><span>Não</span></label>
+          <label class="chip"><input type="radio" name="trilha" value="ia"><span>IA</span></label>
         </div>
       </div>
       <div class="row" data-label="SFX e mixagem" role="radiogroup" aria-labelledby="l-sfx">
@@ -377,9 +406,10 @@
         <div class="chips">
           <label class="chip"><input type="radio" name="locutor" value="sim"><span>Sim</span></label>
           <label class="chip"><input type="radio" name="locutor" value="nao"><span>Não</span></label>
+          <label class="chip"><input type="radio" name="locutor" value="ia"><span>IA</span></label>
         </div>
       </div>
-      <div class="row sub" data-label="Perfil do locutor" data-show-when="locutor=sim" hidden>
+      <div class="row sub" data-label="Perfil do locutor" data-show-when="locutor=sim|ia" hidden>
         <div><label class="lbl" for="locutor_perfil">Perfil do locutor</label></div>
         <input type="text" id="locutor_perfil" name="locutor_perfil" placeholder="Ex.: voz feminina, 30 a 40 anos, tom próximo">
       </div>
@@ -404,9 +434,10 @@
         <div class="chips">
           <label class="chip"><input type="radio" name="casting" value="sim"><span>Sim</span></label>
           <label class="chip"><input type="radio" name="casting" value="nao"><span>Não</span></label>
+          <label class="chip"><input type="radio" name="casting" value="ia"><span>IA</span></label>
         </div>
       </div>
-      <div class="row sub" data-label="Perfil do casting" data-show-when="casting=sim" hidden>
+      <div class="row sub" data-label="Perfil do casting" data-show-when="casting=sim|ia" hidden>
         <div><label class="lbl" for="casting_perfil">Perfil do casting</label></div>
         <input type="text" id="casting_perfil" name="casting_perfil" placeholder="Ex.: casal, 30 a 45 anos">
       </div>
@@ -478,7 +509,9 @@
   function syncConditional() {
     document.querySelectorAll('[data-show-when]').forEach(function (el) {
       var parts = el.dataset.showWhen.split('=');
-      var on = !!form.querySelector('input[name="' + parts[0] + '"][value="' + parts[1] + '"]:checked');
+      var on = parts[1].split('|').some(function (v) {
+        return !!form.querySelector('input[name="' + parts[0] + '"][value="' + v + '"]:checked');
+      });
       el.hidden = !on;
     });
   }
@@ -542,7 +575,7 @@
     if (el.dataset.suffix) v = v + ' ' + el.dataset.suffix;
     return v;
   }
-  function rowValue(row) {
+  function chosenOf(row) {
     if (row.querySelector('input[type=checkbox], input[type=radio]')) {
       return Array.prototype.map.call(
         row.querySelectorAll('input:checked'),
@@ -551,6 +584,13 @@
     }
     var f = row.querySelector('input, textarea');
     return f ? fmt(f) : '';
+  }
+  function otherInput(row) { return row.querySelector('.chips .affix input'); }
+  function rowValue(row) {
+    var v = chosenOf(row);
+    var o = otherInput(row);
+    var ov = o ? o.value.trim() : '';
+    return ov ? (v ? v + ', Outros: ' + ov : 'Outros: ' + ov) : v;
   }
   function buildText() {
     var lines = ['BRIEFING PARA PROPOSTA', 'Sobremesa Ideias', ''];
@@ -570,9 +610,20 @@
   function buildFields() {
     var out = {};
     document.querySelectorAll('section.block .row').forEach(function (row) {
-      out[row.dataset.label] = row.hidden ? '' : rowValue(row);
+      out[row.dataset.label] = row.hidden ? '' : chosenOf(row);
+      var o = otherInput(row);
+      if (o) out[row.dataset.label + ' (outros)'] = o.value.trim();
     });
     return out;
+  }
+  function buildSections() {
+    return Array.prototype.map.call(document.querySelectorAll('section.block'), function (sec) {
+      var rows = [];
+      sec.querySelectorAll('.row').forEach(function (row) {
+        if (!row.hidden) rows.push([row.dataset.label, rowValue(row)]);
+      });
+      return { title: sec.dataset.title, rows: rows };
+    });
   }
 
   function copyText(t) {
@@ -648,6 +699,7 @@
       subject: subjectLine(),
       replyTo: form.elements.email.value.trim(),
       fields: buildFields(),
+      sections: buildSections(),
       text: buildText(),
       website: form.elements.website.value
     };
