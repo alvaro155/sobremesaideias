@@ -98,6 +98,11 @@
   input:focus, textarea:focus { outline: 2px solid var(--orange); outline-offset: 1px; border-color: var(--dark); }
   [aria-invalid="true"] { border-color: var(--red) !important; }
 
+  .field { min-width: 0; }
+  .links { margin-top: 8px; font: 400 13px/1.6 var(--sans); color: var(--gray); overflow-wrap: anywhere; }
+  .links-tag { font-weight: 600; margin-right: 6px; }
+  .links a { color: var(--red); text-decoration: underline; text-underline-offset: 3px; margin-right: 12px; }
+  .links a:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
   .affix { display: flex; align-items: stretch; max-width: 320px; }
   .affix .tag {
     display: flex; align-items: center;
@@ -201,6 +206,8 @@
     .row { grid-template-columns: 52mm 1fr; padding: 10px 0; break-inside: avoid; }
     .row > div:first-child { padding-top: 4px; }
     .hint { display: none; }
+    .links { font-size: 10pt; margin-top: 4px; }
+    .links a { color: #8a2a20; }
     input[type=text], input[type=email], input[type=date], input[type=number], textarea { background: #fff; border-color: #bbb; padding: 6px 8px; font-size: 10.5pt; }
     textarea { min-height: 0 !important; resize: none; field-sizing: content; overflow: visible; }
     input::placeholder, textarea::placeholder { color: transparent; }
@@ -242,9 +249,9 @@
         <div><label class="lbl" for="lead">Lead</label><p class="hint">Quem responde pelo job.</p></div>
         <input type="text" id="lead" name="lead" placeholder="Nome">
       </div>
-      <div class="row" data-label="E-mail do lead">
+      <div class="row" data-label="E-mail do lead" data-links="1">
         <div><label class="lbl" for="email">E-mail do lead<span class="req" aria-hidden="true">*</span></label><p class="hint">Para onde vai a proposta.</p></div>
-        <input type="email" id="email" name="email" placeholder="nome@empresa.com.br" required aria-required="true" autocomplete="email">
+        <div class="field"><input type="email" id="email" name="email" placeholder="nome@empresa.com.br" required aria-required="true" autocomplete="email"><div class="links" hidden></div></div>
       </div>
       <div class="row" data-label="Gerou cliente">
         <div><label class="lbl" for="gerou_cliente">Gerou cliente</label></div>
@@ -259,9 +266,9 @@
         <div><label class="lbl" for="titulo">Título<span class="req" aria-hidden="true">*</span></label></div>
         <input type="text" id="titulo" name="titulo" placeholder="Nome do job ou da campanha" required aria-required="true">
       </div>
-      <div class="row" data-label="Briefing">
+      <div class="row" data-label="Briefing" data-links="1">
         <div><label class="lbl" for="briefing">Briefing<span class="req" aria-hidden="true">*</span></label><p class="hint">O pedido em poucas linhas. Contexto, produto, mensagem principal.</p></div>
-        <textarea id="briefing" name="briefing" class="lg" required aria-required="true"></textarea>
+        <div class="field"><textarea id="briefing" name="briefing" class="lg" required aria-required="true"></textarea><div class="links" hidden></div></div>
       </div>
       <div class="row" data-label="Público-alvo">
         <div><label class="lbl" for="publico">Público-alvo</label><p class="hint">Quem precisa ser alcançado. Idade, classe, região, momento de vida.</p></div>
@@ -288,9 +295,9 @@
         <div><label class="lbl" for="restr_esteticas">Restrições estéticas</label><p class="hint">O que não pode aparecer. Manual de marca, cores, situações.</p></div>
         <textarea id="restr_esteticas" name="restr_esteticas"></textarea>
       </div>
-      <div class="row" data-label="Referências">
+      <div class="row" data-label="Referências" data-links="1">
         <div><label class="lbl" for="referencias">Referências</label><p class="hint">1 link por linha. Filmes, campanhas, fotos, moodboards.</p></div>
-        <textarea id="referencias" name="referencias" placeholder="https://"></textarea>
+        <div class="field"><textarea id="referencias" name="referencias" placeholder="https://"></textarea><div class="links" hidden></div></div>
       </div>
     </section>
 
@@ -491,6 +498,50 @@
   var form = document.getElementById('brief');
   var statusEl = document.getElementById('status');
 
+  /* Links e e-mails clicáveis sob os campos marcados com data-links */
+  var LINK_SRC = '(?:https?:\\/\\/|www\\.)[^\\s<>"\']+|[A-Za-z0-9._%+\\-]+@[A-Za-z0-9.\\-]+\\.[A-Za-z]{2,}';
+  function findLinks(text) {
+    var out = [], seen = {}, m, re = new RegExp(LINK_SRC, 'gi');
+    while ((m = re.exec(text)) !== null) {
+      var s = m[0], href;
+      if (/^(https?:\/\/|www\.)/i.test(s)) {
+        s = s.replace(/[.,;:!?)\]}]+$/, '');
+        if (s.replace(/^(https?:\/\/|www\.)/i, '').length < 3) continue;
+        href = /^www\./i.test(s) ? 'https://' + s : s;
+      } else {
+        href = 'mailto:' + s;
+      }
+      if (!seen[href]) { seen[href] = 1; out.push({ text: s, href: href }); }
+    }
+    return out.slice(0, 10);
+  }
+  function renderLinks(field) {
+    var box = field.parentNode.querySelector('.links');
+    if (!box) return;
+    while (box.firstChild) box.removeChild(box.firstChild);
+    var items = findLinks(field.value);
+    box.hidden = items.length === 0;
+    if (!items.length) return;
+    var tag = document.createElement('span');
+    tag.className = 'links-tag';
+    tag.textContent = 'Abrir:';
+    box.appendChild(tag);
+    items.forEach(function (it) {
+      var a = document.createElement('a');
+      a.href = it.href;
+      a.textContent = it.text.replace(/^https?:\/\//i, '');
+      if (/^https?:/i.test(it.href)) { a.target = '_blank'; a.rel = 'noopener noreferrer'; }
+      box.appendChild(a);
+      box.appendChild(document.createTextNode(' '));
+    });
+  }
+  function refreshLinks() {
+    form.querySelectorAll('.row[data-links]').forEach(function (row) {
+      var f = row.querySelector('input, textarea');
+      if (f) renderLinks(f);
+    });
+  }
+
   /* Textareas crescem com o texto */
   function grow(t) { t.style.height = 'auto'; t.style.height = (t.scrollHeight + 2) + 'px'; }
   function growAll() { form.querySelectorAll('textarea').forEach(grow); }
@@ -556,7 +607,7 @@
   function save() { try { localStorage.setItem(KEY, JSON.stringify(serialize())); } catch (e) {} }
   function load() { try { var s = localStorage.getItem(KEY); if (s) restore(JSON.parse(s)); } catch (e) {} }
 
-  function refresh() { syncReducoes(); syncConditional(); save(); }
+  function refresh() { syncReducoes(); syncConditional(); refreshLinks(); save(); }
 
   form.addEventListener('input', function (e) {
     if (e.target.tagName === 'TEXTAREA') grow(e.target);
@@ -620,7 +671,7 @@
     return Array.prototype.map.call(document.querySelectorAll('section.block'), function (sec) {
       var rows = [];
       sec.querySelectorAll('.row').forEach(function (row) {
-        if (!row.hidden) rows.push([row.dataset.label, rowValue(row)]);
+        if (!row.hidden) rows.push([row.dataset.label, rowValue(row), row.hasAttribute('data-links') ? 1 : 0]);
       });
       return { title: sec.dataset.title, rows: rows };
     });
@@ -699,6 +750,7 @@
       subject: subjectLine(),
       replyTo: form.elements.email.value.trim(),
       fields: buildFields(),
+      linkFields: Array.prototype.map.call(document.querySelectorAll('.row[data-links]'), function (r) { return r.dataset.label; }),
       sections: buildSections(),
       text: buildText(),
       website: form.elements.website.value
@@ -742,7 +794,7 @@
     if (!window.confirm('Apagar todas as respostas deste formulário?')) return;
     form.reset();
     try { localStorage.removeItem(KEY); } catch (e) {}
-    syncReducoes(); syncConditional(); growAll();
+    syncReducoes(); syncConditional(); refreshLinks(); growAll();
     sending = false; sendBtn.disabled = false; sendBtn.textContent = 'Enviar briefing';
     statusEl.textContent = 'Respostas apagadas.';
   });
@@ -750,6 +802,7 @@
   load();
   syncReducoes();
   syncConditional();
+  refreshLinks();
   growAll();
 })();
 </script>
